@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Dr. Raj Deb Saha
+Associate Consultant
+Nephrology
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Private OPD
 
-## Available Scripts
+Mon - Sat :  6 pm - 8 pm 
+Room No. : 1236 
+mail : rajdeb@live.com
 
-In the project directory, you can run:
+### Conditions Treated
 
-### `yarn start`
+AKI, CKD, Glomerulonephritis, Electrolyte Imbalance, Diabetic kidney Disease, Hypertension
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Languages Spoken
+English, Hindi, Bengali, Marathi, Nepali, Kannada
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Procedures Performed
+Kidney biopsy, Permcath Insertion, AV Fistula, Fistuloplasty, PD catheter insertion
 
-### `yarn test`
+### Interests
+Interventional Nephrology, Kidney Transplant, Diabetic Kidney Disease
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Education
+2024
+DM (Nephology) - KMC, Manipal
 
-### `yarn build`
+ 2024
+Interventional Nephrology Fellowship (ISN -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ 2019
+MD (General Medicine) -
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 2015
+MBBS -
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Positions Held
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2024 - 2024
+Interventional Nephrology Fellow
+Sir Ganga Ram Hospital, New Delhi
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ 2021 - 2023
+DM Registrar
+KMC, Manipal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ 2019 - 2020
+Senior Resident
+Dr. D. Y. Patil, Pimpri, Pune
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ 2016 - 2019
+MD General Medicine Residency
+Dr. D. Y. Patil, Pimpri, Pune
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 2015 - 2016
+Internship
+Dr. RML Hospital, New Delhi
