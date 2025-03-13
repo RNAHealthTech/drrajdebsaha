@@ -12,6 +12,7 @@ const pageVariants = {
 };
 
 const ServiceTemplate: React.FC = () => {
+  
   const { slug } = useParams<{ slug: string }>();
   const [service, setService] = useState<Service | null>(null);
   const [isLoading, setIsLoading] = useState(true);

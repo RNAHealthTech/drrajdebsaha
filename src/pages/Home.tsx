@@ -1,19 +1,25 @@
-import React from "react";
-import {motion} from 'framer-motion';
+import React, {useState} from "react";
+import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+import AppointmentModal from "../layout/AppointmentModal";
 
 
 const HeroSection: React.FC = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="relative min-h-screen bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-blue-500 opacity-5 rounded-bl-full"></div>
             <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-500 opacity-5 rounded-tr-full"></div>
-            
+
             {/* Content Container */}
             <div className="max-w-6xl mx-auto px-5 pt-32 pb-20 md:pt-40 md:pb-32 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    
+
                     {/* Text Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -26,17 +32,21 @@ const HeroSection: React.FC = () => {
                         <p className="text-lg text-gray-700 mb-8 max-w-xl">
                             Specialized nephrology care focusing on personalized treatment plans and cutting-edge interventional procedures.
                         </p>
-                        
-                    
-                        
+
+
+
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Link to="/appointment" className="px-6 py-3 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-colors text-center font-medium">
+                            <Link
+                                onClick={openModal}
+                                to="#"
+                                className="px-6 py-3 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-colors text-center font-medium">
                                 Book Appointment
                             </Link>
                         </div>
                     </motion.div>
-                    
+                    <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
+
                     {/* Interactive 3D Card */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
@@ -55,7 +65,7 @@ const HeroSection: React.FC = () => {
                                     <h2 className="text-2xl font-bold text-gray-900">Dr. Raj Deb Saha</h2>
                                     <p className="text-blue-600">Associate Consultant, Nephrology</p>
                                 </div>
-                                
+
                                 <div className="space-y-4">
                                     <div className="bg-blue-50 p-4 rounded-lg">
                                         <h3 className="font-medium text-blue-900 mb-2">Specialties</h3>
@@ -65,19 +75,19 @@ const HeroSection: React.FC = () => {
                                             <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Diabetic Kidney Disease</span>
                                         </div>
                                     </div>
-                                    
+
                                     <div>
                                         <h3 className="font-medium text-blue-900 mb-2">Education</h3>
                                         <p className="text-sm text-gray-700">DM (Nephrology) - KMC, Manipal</p>
                                         <p className="text-sm text-gray-700">Interventional Nephrology Fellowship (ISN)</p>
                                     </div>
-                                    
+
                                     <Link to="/about" className="block text-center text-blue-600 hover:text-blue-800 font-medium">
                                         View Full Profile →
                                     </Link>
                                 </div>
                             </div>
-                            
+
                             {/* Decorative Elements */}
                             <div className="absolute top-4 left-4 w-full h-full bg-blue-200 rounded-2xl -z-10"></div>
                             <div className="absolute top-8 left-8 w-full h-full bg-blue-100 rounded-2xl -z-20"></div>
@@ -85,9 +95,9 @@ const HeroSection: React.FC = () => {
                     </motion.div>
                 </div>
             </div>
-            
+
             {/* Floating Feature Bar */}
-            <motion.div 
+            <motion.div
                 className="bg-white shadow-lg rounded-xl max-w-5xl mx-auto relative -mt-12 z-20 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,7 +124,7 @@ const HeroSection: React.FC = () => {
 
 
 const Home: React.FC = () => {
-    
+
     return (
         <HeroSection />
     )

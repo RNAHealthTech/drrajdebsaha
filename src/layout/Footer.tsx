@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Clock, MapPin, Phone, Mail, Calendar, Instagram, Linkedin, Twitter } from "lucide-react";
+import AppointmentModal from "./AppointmentModal";
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
-    
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <footer className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
             {/* Main Footer */}
@@ -126,7 +131,10 @@ const Footer: React.FC = () => {
                             </li>
                             <li className="flex items-start">
                                 <div>
-                                    <Link to="/appointment" className="px-4 py-2 bg-white text-blue-800 rounded-md hover:bg-blue-100 transition-colors inline-block mt-2">
+                                    <Link
+                                        onClick={openModal}
+                                        to="#"
+                                        className="px-4 py-2 bg-white text-blue-800 rounded-md hover:bg-blue-100 transition-colors inline-block mt-2">
                                         Book Appointment
                                     </Link>
                                 </div>
@@ -135,6 +143,9 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
+
 
             {/* Languages Section */}
             <div className="border-t border-blue-700 py-6">
@@ -159,12 +170,12 @@ const Footer: React.FC = () => {
                         <p>&copy; {currentYear} Dr. Rajdeb Saha. All rights reserved.</p>
                         <div className="mt-2 md:mt-0">
                             <p className="mr-4 hover:text-blue-300 transition-colors">
-                            website by 
-                            <a href="https://rnahealthtech.com">
-                                {' '} RNA HealthTech 
-                            </a>
+                                website by
+                                <a href="https://rnahealthtech.com">
+                                    {' '} RNA HealthTech
+                                </a>
                             </p>
-                            
+
                         </div>
                     </div>
                 </div>
