@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                         <h3 className="text-2xl font-bold mb-6">Dr. Rajdeb Saha</h3>
                         <p className="mb-2">Associate Consultant</p>
                         <p className="mb-4">Nephrology</p>
-                        <div className="flex space-x-4 mt-4">
+                        {/* <div className="flex space-x-4 mt-4">
                             <a href="#" className="hover:text-blue-300 transition-colors">
                                 <Instagram className="w-5 h-5" />
                             </a>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                             <a href="#" className="hover:text-blue-300 transition-colors">
                                 <Twitter className="w-5 h-5" />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Services Column */}
@@ -75,27 +75,27 @@ const Footer: React.FC = () => {
                         <h3 className="text-xl font-semibold mb-6">Procedures Performed</h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link to="/procedures/kidney-biopsy" className="hover:text-blue-300 transition-colors">
+                                <Link to="#" className="hover:text-blue-300 transition-colors">
                                     Kidney Biopsy
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/procedures/permcath-insertion" className="hover:text-blue-300 transition-colors">
+                                <Link to="#" className="hover:text-blue-300 transition-colors">
                                     Permcath Insertion
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/procedures/av-fistula" className="hover:text-blue-300 transition-colors">
+                                <Link to="#" className="hover:text-blue-300 transition-colors">
                                     AV Fistula
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/procedures/fistuloplasty" className="hover:text-blue-300 transition-colors">
+                                <Link to="#" className="hover:text-blue-300 transition-colors">
                                     Fistuloplasty
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/procedures/pd-catheter" className="hover:text-blue-300 transition-colors">
+                                <Link to="#" className="hover:text-blue-300 transition-colors">
                                     PD Catheter Insertion
                                 </Link>
                             </li>

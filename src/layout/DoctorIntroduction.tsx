@@ -108,19 +108,16 @@ const DoctorIntroduction: React.FC = () => {
                     <div className="space-y-8">
                         {/* Message 1 */}
                         <motion.div
-                            className="p-6 rounded-lg shadow-md border-2 border-amber-700 max-w-lg"
+                            className="p-6 rounded-lg shadow-md border-2 border-gray-200 max-w-lg"
                             custom={0}
                             initial="hidden"
                             animate={controls}
                             variants={messageVariants}
                         >
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center flex-shrink-0 border-2 border-amber-600">
-                                    <span className="text-white font-bold">RS</span>
-                                </div>
                                 <div>
-                                    <h3 className="font-serif text-xl text-amber-900 mb-2">Greetings!</h3>
-                                    <p className="font-serif text-amber-800">
+                                    <h3 className="font-serif text-xl text-blue-900 mb-2">Greetings!</h3>
+                                    <p className="font-serif text-blue-800">
                                         I'm Dr. Raj Deb Saha, and I'm dedicated to providing exceptional kidney care with a personalized approach for each patient.
                                     </p>
                                 </div>
@@ -129,19 +126,17 @@ const DoctorIntroduction: React.FC = () => {
 
                         {/* Message 2 */}
                         <motion.div
-                            className="p-6 rounded-lg shadow-md border-2 border-amber-700 max-w-lg ml-auto"
+                            className="p-6 rounded-lg shadow-md border-2 border-gray-300 max-w-lg ml-auto"
                             custom={1}
                             initial="hidden"
                             animate={controls}
                             variants={messageVariants}
                         >
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center flex-shrink-0 border-2 border-amber-600">
-                                    <span className="text-white font-bold">RS</span>
-                                </div>
+                               
                                 <div>
-                                    <h3 className="font-serif text-xl text-amber-900 mb-2">My Philosophy</h3>
-                                    <p className="font-serif text-amber-800">
+                                    {/* <h3 className="font-serif text-xl text-blue-900 mb-2">My Philosophy</h3> */}
+                                    <p className="font-serif text-blue-800">
                                         With over a decade of specialized training, I believe in combining advanced medical knowledge with compassionate care for comprehensive kidney treatment.
                                     </p>
                                 </div>
@@ -150,19 +145,17 @@ const DoctorIntroduction: React.FC = () => {
 
                         {/* Message 3 */}
                         <motion.div
-                            className="p-6 rounded-lg shadow-md border-2 border-amber-700 max-w-lg"
+                            className="p-6 rounded-lg shadow-md border-2 border-gray-100 max-w-lg"
                             custom={2}
                             initial="hidden"
                             animate={controls}
                             variants={messageVariants}
                         >
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center flex-shrink-0 border-2 border-amber-600">
-                                    <span className="text-white font-bold">RS</span>
-                                </div>
+                               
                                 <div>
-                                    <h3 className="font-serif text-xl text-amber-900 mb-2">My Commitment</h3>
-                                    <p className="font-serif text-amber-800">
+                                    {/* <h3 className="font-serif text-xl text-blue-900 mb-2">My Commitment</h3> */}
+                                    <p className="font-serif text-blue-800">
                                         I focus on interventional nephrology and kidney transplantation, ensuring you receive the most advanced care available for your kidney health needs.
                                     </p>
                                 </div>
@@ -201,7 +194,7 @@ const DoctorIntroduction: React.FC = () => {
                                         className="text-2xl font-bold text-gray-900"
                                         style={{ transform: 'translateZ(30px)' }}
                                     >
-                                        Dr. Raj Deb Saha
+                                        Dr. Rajdeb Saha
                                     </h2>
                                     <p
                                         className="text-blue-600"
