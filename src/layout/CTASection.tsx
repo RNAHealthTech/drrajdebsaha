@@ -49,12 +49,13 @@ const CTASection: React.FC = () => {
 
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500 opacity-5 rounded-bl-full"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-500 opacity-5 rounded-tr-full"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+      {/* Update decorative elements to be smaller */}
+      <div className="absolute top-0 right-0 w-1/4 h-1/3 bg-blue-500 opacity-5 rounded-bl-full"></div>
+      <div className="absolute bottom-0 left-0 w-1/4 h-1/3 bg-blue-500 opacity-5 rounded-tr-full"></div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-blue-900 mb-4"
@@ -80,7 +81,7 @@ const CTASection: React.FC = () => {
           {/* Left Column: Appointment Board */}
           <motion.div
             className="lg:w-1/3 order-2 lg:order-1"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}

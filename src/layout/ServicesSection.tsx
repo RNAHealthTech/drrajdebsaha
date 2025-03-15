@@ -50,9 +50,9 @@ const ServicesSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-5">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          // initial={{ opacity: 0, y: 30 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -154,9 +154,9 @@ const ServicesSection: React.FC = () => {
           {/* Right: Floating Medical Visuals */}
           <motion.div 
             className="w-full lg:w-1/2 relative h-80 lg:h-96"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            // initial={{ opacity: 0, x: 30 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <div className="relative w-full h-full">
@@ -250,8 +250,8 @@ const ServicesSection: React.FC = () => {
         {/* CTA Button */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          // initial={{ opacity: 0, y: 20 }}
+          // whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >

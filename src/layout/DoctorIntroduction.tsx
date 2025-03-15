@@ -80,12 +80,11 @@ const DoctorIntroduction: React.FC = () => {
     };
 
     return (
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-20" ref={scrollRef}>
-            {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-blue-500 opacity-5 rounded-bl-full"></div>
-            <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-500 opacity-5 rounded-tr-full"></div>
-
-            <div className="container mx-auto px-4">
+        <div className="relative bg-gradient-to-r from-blue-50 to-blue-100 py-20 overflow-hidden" ref={scrollRef}>
+        {/* Background Decorations - make them relative to the container with overflow hidden */}
+        <div className="absolute top-0 right-0 w-1/3 h-2/3 bg-blue-500 opacity-5 rounded-bl-full"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-blue-500 opacity-5 rounded-tr-full"></div>
+            <div className="container mx-auto px-4 max-w-6xl">
                 <div className="mb-12 text-center">
                     <motion.h2
                         className="text-3xl md:text-4xl font-bold text-blue-900 mb-4"
@@ -113,6 +112,7 @@ const DoctorIntroduction: React.FC = () => {
                             initial="hidden"
                             animate={controls}
                             variants={messageVariants}
+                          
                         >
                             <div className="flex items-start gap-4">
                                 <div>
@@ -131,6 +131,7 @@ const DoctorIntroduction: React.FC = () => {
                             initial="hidden"
                             animate={controls}
                             variants={messageVariants}
+                           
                         >
                             <div className="flex items-start gap-4">
                                
@@ -248,11 +249,7 @@ const DoctorIntroduction: React.FC = () => {
 
                 {/* Floating Feature Bar - moved from hero section */}
                 <motion.div
-                    className="bg-white shadow-lg rounded-xl max-w-5xl mx-auto mt-16 z-20 overflow-hidden"
-                    variants={floatingBarVariants}
-                    initial="hidden"
-                    animate={controls}
-                >
+                    className="bg-white shadow-lg rounded-xl max-w-5xl mx-auto mt-16 z-20 overflow-hidden">
                     <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
                         <div className="p-6 text-center">
                             <h3 className="font-bold text-xl text-gray-800 mb-2">Expert Care</h3>
