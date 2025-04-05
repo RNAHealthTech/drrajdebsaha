@@ -62,7 +62,7 @@ const ServiceTemplate: React.FC = () => {
       variants={pageVariants}
     >
       {/* Hero Section - Changed to blue-turquoise-cyan gradient */}
-      <div className="relative bg-gradient-to-r from-cyan-700 to-blue-500 text-white py-16">
+      <div className="relative bg-gradient-to-r from-cyan-700 to-blue-500 text-white py-16 -mt-4">
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">

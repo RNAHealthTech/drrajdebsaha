@@ -50,9 +50,6 @@ const ServicesSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-5">
         <motion.div 
-          // initial={{ opacity: 0, y: 30 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -154,12 +151,106 @@ const ServicesSection: React.FC = () => {
           {/* Right: Floating Medical Visuals */}
           <motion.div 
             className="w-full lg:w-1/2 relative h-80 lg:h-96"
-            // initial={{ opacity: 0, x: 30 }}
-            // whileInView={{ opacity: 1, x: 0 }}
-            // transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full h-full">
+            {/* Mobile Floating Icons: Circular orbit animation - only shown on smaller screens */}
+            <div className="lg:hidden relative w-full h-full flex items-center justify-center">
+              <div className="relative w-64 h-64">
+                {/* Center element */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 z-10">
+                  <img 
+                    src="https://www.svgrepo.com/show/284209/kidneys-kidney.svg" 
+                    alt="Kidney illustration" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Orbiting elements */}
+                <motion.div
+                  className="absolute w-full h-full"
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                >
+                  {/* Element 1 */}
+                  <motion.div
+                    className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <img 
+                      src="/images/earth-globe.jpg" 
+                      alt="Medical chart" 
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+                  
+                  {/* Element 2 */}
+                  <motion.div
+                    className="absolute top-1/2 right-0 transform translate-y-1/2 translate-x-1/2 w-12 h-12"
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1
+                    }}
+                  >
+                    <img 
+                      src="/images/medical-symbol.png" 
+                      alt="Medical symbol" 
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+                  
+                  {/* Element 3 */}
+                  <motion.div
+                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16"
+                    animate={{ scale: [1, 1.15, 1] }}
+                    transition={{
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5
+                    }}
+                  >
+                    <img 
+                      src="/images/microscope.webp" 
+                      alt="Microscope" 
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+                  
+                  {/* Element 4 */}
+                  <motion.div
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 w-14 h-14"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1.5
+                    }}
+                  >
+                    <img 
+                      src="/images/medical-chart.avif" 
+                      alt="Medical charts" 
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+            
+            {/* Desktop Floating Icons: Only shown on larger screens */}
+            <div className="hidden lg:block relative w-full h-full">
               {/* Moving kidney illustration */}
               <motion.div
                 className="absolute w-40 h-40 top-0 left-10"
@@ -250,8 +341,6 @@ const ServicesSection: React.FC = () => {
         {/* CTA Button */}
         <motion.div 
           className="text-center"
-          // initial={{ opacity: 0, y: 20 }}
-          // whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
