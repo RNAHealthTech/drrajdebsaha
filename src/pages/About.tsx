@@ -103,15 +103,15 @@ const About: React.FC = () => {
             </motion.div>
             
             <motion.div 
-              className="hidden md:flex justify-center"
+              className=" md:flex justify-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
               {/* Placeholder for Doctor's Image */}
-              <div className="w-80 h-96 rounded-lg flex items-center justify-center text-white">
+              <div className="w-full h-full md:h-96 rounded-lg flex items-center justify-center text-white">
                 <div className="text-center">
-                  <img src='/images/doc.png' className='w-full h-full' />
+                  <img src='/images/dr.JPG' alt='doctor' className='w-full h-full' />
                 </div>
               </div>
             </motion.div>

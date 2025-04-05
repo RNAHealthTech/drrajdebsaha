@@ -189,7 +189,7 @@ const DoctorIntroduction: React.FC = () => {
                                         className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden"
                                         style={{ transform: 'translateZ(40px)' }}
                                     >
-                                        <img src="/images/doc.png" className="w-full h-full object-cover" />
+                                        <img src="/images/home.JPG" alt='doctor' className="w-full h-full object-cover" />
                                     </div>
                                     <h2
                                         className="text-2xl font-bold text-gray-900"

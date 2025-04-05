@@ -5,6 +5,7 @@ import AppointmentModal from "../layout/AppointmentModal";
 import DoctorIntroduction from "../layout/DoctorIntroduction";
 import ServicesSection from "../layout/ServicesSection";
 import CTASection from "../layout/CTASection";
+import ImageCarousel from "../layout/ImageCarousel";
 
 const HeroSection: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -102,6 +103,9 @@ const Home: React.FC = () => {
             <DoctorIntroduction />
             <ServicesSection />
             <CTASection />
+            <div className="max-w-7xl mx-auto mt-20 mb-10">
+                <ImageCarousel />
+            </div>
         </>
     )
 }

@@ -75,10 +75,10 @@ const Header: React.FC = () => {
                             }`}>
                                 Dr. Rajdeb Saha
                             </div>
-                            <div className={`text-sm transition-all duration-500 ${
+                            <div className={`hidden md:block text-sm transition-all duration-500 ${
                                 isScrolled ? 'text-gray-100' : 'text-blue-100'
                             }`}>
-                                Associate Consultant, Nephrology
+                                Consultant Nephrologist and Kidney Transplantation 
                             </div>
                         </Link>
                     </motion.div>

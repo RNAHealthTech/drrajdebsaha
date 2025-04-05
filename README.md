@@ -70,11 +70,11 @@ Landing cover shade a little lighter, header color to remain same [done]
 
 Raj & deb is together [fixed]
 
-Services page blue (turqoise) should dominate
+Services page blue (turqoise) should dominate [fixed]
 
 Remove associate instead write consultant nephrologist
-And kidney transplantation
+And kidney transplantation [fixed]
 
-Create media section 
+Create media section [done]
 
-Videos to be shared
+Videos to be shared [waiting]
