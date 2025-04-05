@@ -8,9 +8,9 @@ const Contact: React.FC = () => {
   const [state, handleSubmit] = useForm('xqapkolz');
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    // email: '',
     phone: '',
-    date: '',
+    // date: '',
     message: ''
   });
 
@@ -29,10 +29,10 @@ const Contact: React.FC = () => {
   }
 
   const handleWhatsAppSubmit = () => {
-    const phoneNumber = '91'; //  number without spaces or special characters
+    const phoneNumber = '919561409398'; //  number without spaces or special characters
 
     // Format the message for WhatsApp
-    const message = `Hello Dr. Rajdeb,\n\nNew appointment request:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPreferred Date: ${formData.date}\nQuery: ${formData.message}`;
+    const message = `Hello Dr. Rajdeb,\n\nNew appointment request:\nName: ${formData.name}\nPhone: ${formData.phone}\nQuery: ${formData.message}`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                 >
                   <div className="bg-gradient-to-r from-blue-700 to-blue-700 p-6 text-white">
                     <h2 className="text-2xl font-bold">Dr. Rajdeb Saha</h2>
-                    <p className="text-indigo-100">Associate Consultant, Nephrology</p>
+                    <p className="text-indigo-100"> Consultant Nephrologist and Kidney Transplantation</p>
                   </div>
 
                   <div className="p-6 space-y-4">
@@ -200,7 +200,7 @@ const Contact: React.FC = () => {
                           </div>
 
                           {/* Email Field */}
-                          <div>
+                          {/* <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                             <input
                               type="email"
@@ -214,7 +214,7 @@ const Contact: React.FC = () => {
                             />
                             <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-                          </div>
+                          </div> */}
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -234,7 +234,7 @@ const Contact: React.FC = () => {
                           </div>
 
                           {/* Date Field */}
-                          <div>
+                          {/* <div>
                             <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Appointment Date</label>
                             <input
                               type="date"
@@ -249,12 +249,12 @@ const Contact: React.FC = () => {
 
                           <ValidationError prefix="Date" field="date" errors={state.errors} />
 
-                          </div>
+                          </div> */}
                         </div>
 
                         {/* Message Field */}
                         <div>
-                          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Additional Information</label>
+                          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Additional Information (Optional)</label>
                           <textarea
                             id="message"
                             rows={4}
@@ -331,35 +331,6 @@ const Contact: React.FC = () => {
               </motion.div>
             </div>
           </div>
-
-          {/* Floating WhatsApp Action Button */}
-          <motion.div
-            className="fixed bottom-6 right-6 z-50"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 1.5, type: "spring" }}
-          >
-            <div className="relative group">
-              <motion.a
-                href="https://wa.me/?text=I'd like to schedule an appointment with Dr. Rajdeb Saha"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center bg-green-500 text-white p-4 rounded-full shadow-lg"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                  <path d="M5.339 21.286l.415-.262c1.845-1.053 3.32-2.447 4.341-4.089l.255-.408-.161-.441a9.096 9.096 0 0 1-.587-3.322c.017-5.11 4.064-9.169 9.09-9.169 2.431-.017 4.716.931 6.42 2.667a9.33 9.33 0 0 1 2.65 6.472c-.017 5.11-4.064 9.169-9.09 9.169h-.004c-1.576 0-3.124-.397-4.552-1.158l-.425-.24L9.5 20.9l-4.161.387z" fillRule="evenodd" clipRule="evenodd" />
-                </svg>
-              </motion.a>
-              <div className="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg whitespace-nowrap">
-                  <p>Chat on WhatsApp</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </>
       </AnimatePresence>
     </div>

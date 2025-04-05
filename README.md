@@ -1,6 +1,5 @@
-# Dr. Raj Deb Saha
-Associate Consultant
-Nephrology
+# Dr. Rajdeb Saha
+Consultant Nephrologist and Kidney Transplantation
 
 ### Private OPD
 
@@ -56,3 +55,26 @@ Dr. D. Y. Patil, Pimpri, Pune
  2015 - 2016
 Internship
 Dr. RML Hospital, New Delhi
+
+
+Dr Rajdeb Saha changes
+
+Book now icon fixed [fixed]
+
+WhatsApp booking [added]
+Only name and number required [fixed] 
+
+No date required for appointment [fixed]
+
+Landing cover shade a little lighter, header color to remain same [done]
+
+Raj & deb is together [fixed]
+
+Services page blue (turqoise) should dominate
+
+Remove associate instead write consultant nephrologist
+And kidney transplantation
+
+Create media section 
+
+Videos to be shared

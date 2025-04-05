@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getServiceBySlug, Service } from '../data/services';
 import { ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
+import AppointmentModal from '../layout/AppointmentModal';
+
 
 // Animation variants
 const pageVariants = {
@@ -12,16 +14,21 @@ const pageVariants = {
 };
 
 const ServiceTemplate: React.FC = () => {
-  
+
   const { slug } = useParams<{ slug: string }>();
   const [service, setService] = useState<Service | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
     // Scroll to top when page loads
     window.scrollTo(0, 0);
-    
+
     if (slug) {
       const serviceData = getServiceBySlug(slug);
       if (serviceData) {
@@ -54,49 +61,50 @@ const ServiceTemplate: React.FC = () => {
       exit="out"
       variants={pageVariants}
     >
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
+      {/* Hero Section - Changed to blue-turquoise-cyan gradient */}
+      <div className="relative bg-gradient-to-r from-cyan-700 to-blue-500 text-white py-16">
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{service.title}</h1>
-              <p className="text-lg text-blue-100 mb-6">{service.briefDescription}</p>
-              <a 
-                href="/appointment" 
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-800 rounded-md hover:bg-blue-50 transition-colors duration-300 font-medium"
+              <p className="text-lg text-cyan-100 mb-6">{service.briefDescription}</p>
+              <Link 
+                onClick={openModal} 
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-white text-cyan-700 rounded-md hover:bg-cyan-50 transition-colors duration-300 font-medium"
               >
                 Book Consultation <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
+              </Link>
             </div>
             <div className="md:w-5/12">
               <div className="relative rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src={service.imagePath} 
-                  alt={service.title} 
+                <img
+                  src={service.imagePath}
+                  alt={service.title}
                   className="w-full h-64 md:h-80 object-cover"
                 />
-                <div className="absolute inset-0 bg-blue-900 opacity-20"></div>
+                <div className="absolute inset-0 bg-cyan-900 opacity-20"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-5 py-12">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Content - Main Description */}
           <div className="lg:w-2/3">
             <div className="prose prose-lg max-w-none">
-              <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-6">About {service.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-700 mb-6">About {service.title}</h2>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">{service.fullDescription}</p>
-              
-              <h3 className="text-xl font-semibold text-blue-700 mb-4">Key Characteristics</h3>
+
+              <h3 className="text-xl font-semibold text-blue-600 mb-4">Key Characteristics</h3>
               <div className="grid md:grid-cols-1 gap-6 mb-8">
                 {service.traits.map((trait, index) => (
-                  <div key={index} className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100">
-                    <h4 className="text-lg font-semibold text-blue-800 mb-2 flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-2 text-blue-600" />
+                  <div key={index} className="bg-cyan-50 p-6 rounded-lg shadow-sm border border-cyan-100">
+                    <h4 className="text-lg font-semibold text-cyan-700 mb-2 flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-2 text-cyan-600" />
                       {trait.title}
                     </h4>
                     <p className="text-gray-700">{trait.description}</p>
@@ -104,129 +112,130 @@ const ServiceTemplate: React.FC = () => {
                 ))}
               </div>
 
-              <h3 className="text-xl font-semibold text-blue-700 mb-4">Treatment Approach</h3>
+              <h3 className="text-xl font-semibold text-blue-600 mb-4">Treatment Approach</h3>
               <p className="text-gray-700 mb-6">
-                Dr. Rajdeb Saha takes a comprehensive approach to treating {service.title}, combining the latest 
-                evidence-based medicine with personalized care plans tailored to each patient's unique needs. Treatment 
+                Dr. Rajdeb Saha takes a comprehensive approach to treating {service.title}, combining the latest
+                evidence-based medicine with personalized care plans tailored to each patient's unique needs. Treatment
                 may include medication management, lifestyle modifications, and regular monitoring to ensure optimal outcomes.
               </p>
-              
-              <div className="bg-blue-700 text-white p-6 rounded-lg shadow-md mb-8">
+
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-6 rounded-lg shadow-md mb-8">
                 <h3 className="text-xl font-semibold mb-4">Schedule a Consultation</h3>
                 <p className="mb-4">
-                  If you're experiencing symptoms or have concerns about {service.title}, don't hesitate to schedule 
+                  If you're experiencing symptoms or have concerns about {service.title}, don't hesitate to schedule
                   a consultation with Dr. Rajdeb Saha. Early intervention is key to achieving the best possible outcomes.
                 </p>
-                <a 
-                  href="/appointment" 
-                  className="inline-flex items-center px-5 py-2 bg-white text-blue-800 rounded-md hover:bg-blue-50 transition-colors duration-300 font-medium"
+                <Link
+                  onClick={openModal}
+                  to="#"
+                  className="inline-flex items-center px-5 py-2 bg-white text-cyan-700 rounded-md hover:bg-cyan-50 transition-colors duration-300 font-medium"
                 >
                   Book Appointment <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
-          
+
           {/* Right Sidebar - Symptoms and Related Info */}
           <div className="lg:w-1/3">
             {/* Symptoms Card */}
-            <div className="bg-gray-50 rounded-lg shadow-md border border-gray-200 p-6 mb-8 sticky top-24">
-              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
-                <AlertCircle className="w-5 h-5 mr-2 text-blue-600" />
+            <div className="bg-cyan-50 rounded-lg shadow-md border border-cyan-100 p-6 mb-8 sticky top-24">
+              <h3 className="text-xl font-semibold text-blue-600 mb-4 flex items-center">
+                <AlertCircle className="w-5 h-5 mr-2 text-cyan-500" />
                 Common Symptoms
               </h3>
               <ul className="space-y-3">
                 {service.symptoms.map((symptom, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mr-3 mt-2"></span>
+                    <span className="inline-block w-2 h-2 rounded-full bg-cyan-500 mr-3 mt-2"></span>
                     <span className="text-gray-700">{symptom}</span>
                   </li>
                 ))}
               </ul>
-              
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <h4 className="font-medium text-blue-800 mb-3">When to Seek Medical Help</h4>
+
+              <div className="mt-8 pt-6 border-t border-cyan-200">
+                <h4 className="font-medium text-cyan-700 mb-3">When to Seek Medical Help</h4>
                 <p className="text-gray-700 text-sm mb-4">
-                  Contact Dr. Rajdeb Saha immediately if you're experiencing severe symptoms or rapid worsening of your condition. 
+                  Contact Dr. Rajdeb Saha immediately if you're experiencing severe symptoms or rapid worsening of your condition.
                   Early intervention is crucial for preventing complications.
                 </p>
-                <a 
-                  href="/contact" 
-                  className="text-blue-700 hover:text-blue-900 font-medium flex items-center text-sm"
+                <a
+                  href="/contact"
+                  className="text-blue-600 hover:text-blue-800 font-medium flex items-center text-sm"
                 >
                   Emergency Contact Information
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </div>
             </div>
-            
-        </div>
+
+          </div>
         </div>
       </div>
-      
+
       {/* Related Services Section */}
-      <div className="bg-gray-50 py-12 mt-12">
+      <div className="bg-cyan-50 py-12 mt-12">
         <div className="max-w-6xl mx-auto px-5">
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-8 text-center">Related Services</h2>
-          
+          <h2 className="text-2xl md:text-3xl font-bold text-cyan-700 mb-8 text-center">Related Services</h2>
+
           <div className="grid md:grid-cols-3 gap-6">
             {/* This would ideally be populated with related services dynamically */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src="/images/services/ckd.jpg" 
-                  alt="Chronic Kidney Disease" 
+                <img
+                  src="/images/services/ckd.jpg"
+                  alt="Chronic Kidney Disease"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-blue-800 mb-2">Chronic Kidney Disease</h3>
+                <h3 className="text-lg font-semibold text-cyan-700 mb-2">Chronic Kidney Disease</h3>
                 <p className="text-gray-600 mb-4 line-clamp-2">Progressive loss of kidney function requiring specialized management.</p>
-                <a 
-                  href="/services/ckd" 
-                  className="text-blue-700 hover:text-blue-900 font-medium flex items-center"
+                <a
+                  href="/services/ckd"
+                  className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
                 >
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src="/images/services/hypertension.jpg" 
-                  alt="Hypertension Management" 
+                <img
+                  src="/images/services/hypertension.jpg"
+                  alt="Hypertension Management"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-blue-800 mb-2">Hypertension Management</h3>
+                <h3 className="text-lg font-semibold text-cyan-700 mb-2">Hypertension Management</h3>
                 <p className="text-gray-600 mb-4 line-clamp-2">Specialized treatment for high blood pressure affecting kidney health.</p>
-                <a 
-                  href="/services/hypertension" 
-                  className="text-blue-700 hover:text-blue-900 font-medium flex items-center"
+                <a
+                  href="/services/hypertension"
+                  className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
                 >
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src="/images/services/electrolyte.jpg" 
-                  alt="Electrolyte Imbalance" 
+                <img
+                  src="/images/services/ele.webp"
+                  alt="Electrolyte Imbalance"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-blue-800 mb-2">Electrolyte Imbalance</h3>
+                <h3 className="text-lg font-semibold text-cyan-700 mb-2">Electrolyte Imbalance</h3>
                 <p className="text-gray-600 mb-4 line-clamp-2">Abnormal levels of essential minerals in the blood requiring specialized correction.</p>
-                <a 
-                  href="/services/electrolyte-imbalance" 
-                  className="text-blue-700 hover:text-blue-900 font-medium flex items-center"
+                <a
+                  href="/services/electrolyte-imbalance"
+                  className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
                 >
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -236,31 +245,7 @@ const ServiceTemplate: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      {/* CTA Section */}
-      <div className="bg-blue-900 text-white py-16">
-        <div className="max-w-4xl mx-auto text-center px-5">
-          <h2 className="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
-          <p className="text-blue-100 mb-8 text-lg">
-            Dr. Rajdeb Saha provides personalized care for patients with {service.title}. 
-            Schedule your consultation today.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href="/appointment" 
-              className="px-8 py-3 bg-white text-blue-800 rounded-md hover:bg-blue-50 transition-colors duration-300 font-medium"
-            >
-              Book Appointment
-            </a>
-            <a 
-              href="/contact" 
-              className="px-8 py-3 bg-blue-700 text-white rounded-md border border-blue-400 hover:bg-blue-800 transition-colors duration-300 font-medium"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
+      <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
     </motion.div>
   );
 };

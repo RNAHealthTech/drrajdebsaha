@@ -118,7 +118,7 @@ const DoctorIntroduction: React.FC = () => {
                                 <div>
                                     <h3 className="font-serif text-xl text-blue-900 mb-2">Greetings!</h3>
                                     <p className="font-serif text-blue-800">
-                                        I'm Dr. Raj Deb Saha, and I'm dedicated to providing exceptional kidney care with a personalized approach for each patient.
+                                        I'm Dr. Rajdeb Saha, and I'm dedicated to providing exceptional kidney care with a personalized approach for each patient.
                                     </p>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@ const DoctorIntroduction: React.FC = () => {
                                         className="text-blue-600"
                                         style={{ transform: 'translateZ(25px)' }}
                                     >
-                                        Associate Consultant, Nephrology
+                                        Consultant Nephrologist and Kidney Transplantation
                                     </p>
                                 </div>
 

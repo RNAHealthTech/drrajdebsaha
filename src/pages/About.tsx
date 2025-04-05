@@ -73,7 +73,7 @@ const About: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
-                Associate Consultant, Nephrology
+                Consultant Nephrologist and Kidney Transplantation
               </motion.h2>
               
               <motion.p 

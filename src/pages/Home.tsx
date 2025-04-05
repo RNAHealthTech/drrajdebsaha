@@ -40,11 +40,11 @@ const HeroSection: React.FC = () => {
                 backgroundPosition: 'center'
             }}>
             {/* Overlay for better text visibility */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-700/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-blue-700/10"></div>
 
             {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-blue-500 opacity-5 rounded-bl-full"></div>
-            <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-500 opacity-5 rounded-tr-full"></div>
+            <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-blue-200 opacity-5 rounded-bl-full"></div>
+            <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-200 opacity-5 rounded-tr-full"></div>
 
             {/* Content Container */}
             <div className="max-w-6xl  mx-auto px-5 pt-32 pb-20 md:pt-40 md:pb-32 mt-6 md:mt-12 relative z-10 text-center">

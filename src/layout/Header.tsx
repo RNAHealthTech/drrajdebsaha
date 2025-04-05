@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import AppointmentModal from "./AppointmentModal";
+
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,6 +42,7 @@ const Header: React.FC = () => {
             ]
         },
         { name: 'Blogs', path: '/blogs' },
+        {name: 'Media', path: '/media'},
         { name: 'Contact', path: '/contact' }
     ];
 

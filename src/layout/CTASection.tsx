@@ -7,9 +7,9 @@ const CTASection: React.FC = () => {
   const [state, handleSubmit] = useForm('xqapkolz');
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
-    date: '',
+    //email: '',
+    // date: '',
     message: ''
   });
 
@@ -32,10 +32,10 @@ const CTASection: React.FC = () => {
   };
 
   const handleWhatsAppSubmit = () => {
-    const phoneNumber = '91'; //  number without spaces or special characters
+    const phoneNumber = '919561409398'; //  number without spaces or special characters
 
     // Format the message for WhatsApp
-    const message = `Hello Dr. Rajdeb,\n\nNew appointment request:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPreferred Date: ${formData.date}\nQuery: ${formData.message}`;
+    const message = `Hello Dr. Rajdeb,\n\nNew appointment request:\nName: ${formData.name}\nPhone: ${formData.phone}\nQuery: ${formData.message}`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -169,7 +169,7 @@ const CTASection: React.FC = () => {
                       />
                     </div>
 
-                    <div>
+                    {/* <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                       <input
                         type="email"
@@ -183,7 +183,7 @@ const CTASection: React.FC = () => {
                       />
                       <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-                    </div>
+                    </div> */}
 
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
@@ -198,7 +198,7 @@ const CTASection: React.FC = () => {
                         required
                       />
                     </div>
-                    <div>
+                    {/* <div>
                       <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Appointment Date</label>
                       <input
                         type="date"
@@ -213,10 +213,10 @@ const CTASection: React.FC = () => {
 
                       <ValidationError prefix="Date" field="date" errors={state.errors} />
 
-                    </div>
+                    </div> */}
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Concerns</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Concerns (Optional)</label>
                       <textarea
                         id="message"
                         name="message"

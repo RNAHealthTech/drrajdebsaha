@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 
 interface AppointmentModalProps {
   isOpen: boolean;
@@ -13,8 +13,8 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
-    date: '',
+    // email: '',
+    // date: '',
     text: '',
   });
 
@@ -25,8 +25,8 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
         setFormData({
           name: '',
           phone: '',
-          email: '',
-          date: '',
+          // email: '',
+          // date: '',
           text: '',
         });
       }, 3000);
@@ -56,11 +56,9 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     
     Name: ${formData.name}
     Phone: ${formData.phone}
-    Email: ${formData.email}
-    Date: ${formData.date}
     Message: ${formData.text}`;
 
-    const whatsappNumber = '91';
+    const whatsappNumber = '919561409398';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -90,19 +88,19 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                   <label htmlFor="name" className="block text-sm font-medium text-blue-700">Name</label>
                   <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
                 </div>
-                <div>
+                {/* <div>
                   <label htmlFor="email" className="block text-sm font-medium text-blue-700">Email</label>
                   <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
                   <ValidationError prefix="Email" field="email" errors={state.errors} />
-                </div>
+                </div> */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-blue-700">Phone</label>
                   <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="mt-1 block w-full border border-blue-400 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
                 </div>
-                <div>
+                {/* <div>
                   <label htmlFor="date" className="block text-sm font-medium text-blue-700">Preferred Date</label>
                   <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="text" className="block text-sm font-medium text-blue-700">Message</label>

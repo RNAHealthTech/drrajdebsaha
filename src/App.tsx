@@ -7,6 +7,8 @@ import About from './pages/About';
 import ServiceTemplate from './pages/ServiceTemplate';
 import Blogs from './pages/Blogs';
 import BlogTemplate from './pages/BlogTemplate';
+import Services from './pages/Services';
+import Media from './pages/Media';
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,7 +28,9 @@ const App: React.FC = () => {
         <Route path='/blog/:slug' element={<BlogTemplate />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/about' element={<About />} />
+        <Route path='/services' element={<Services />} />
         <Route path='/services/:slug' element={<ServiceTemplate />} />
+        <Route path='/media' element={<Media />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </Layout>

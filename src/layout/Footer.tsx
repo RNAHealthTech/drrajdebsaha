@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
                     {/* About Column */}
                     <div>
                         <h3 className="text-2xl font-bold mb-6">Dr. Rajdeb Saha</h3>
-                        <p className="mb-2">Associate Consultant</p>
-                        <p className="mb-4">Nephrology</p>
+                        <p className="mb-2">Consultant</p>
+                        <p className="mb-4">Nephrologist and Kidney Transplantation</p>
                         {/* <div className="flex space-x-4 mt-4">
                             <a href="#" className="hover:text-blue-300 transition-colors">
                                 <Instagram className="w-5 h-5" />

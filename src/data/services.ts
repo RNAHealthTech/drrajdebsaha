@@ -128,7 +128,7 @@ const services: Service[] = [
     slug: "electrolyte-imbalance",
     briefDescription: "Abnormal levels of essential minerals in the blood requiring specialized correction",
     fullDescription: "Electrolyte imbalances occur when essential minerals in your blood are too high or too low. Dr. Rajdeb Saha provides expert diagnosis and treatment for disorders involving sodium, potassium, calcium, magnesium, and other critical electrolytes.",
-    imagePath: "/images/services/electrolyte.webp",
+    imagePath: "/images/services/ele.webp",
     iconPath: "/icons/electrolyte-icon.svg",
     traits: [
       {
