@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-200 opacity-5 rounded-tr-full"></div>
 
             {/* Content Container */}
-            <div className="max-w-6xl  mx-auto px-5 pt-32 pb-20 md:pt-40 md:pb-32 mt-6 md:mt-12 relative z-10 text-center">
+            <div className="max-w-6xl mx-auto px-5 pt-32 pb-20 md:pt-40 md:pb-32 mt-6 md:mt-12 relative z-10 text-center">
                 <motion.div
                     className="max-w-4xl mx-auto"
                     variants={containerVariants}
@@ -57,21 +57,23 @@ const HeroSection: React.FC = () => {
                 >
                     {/* Text Content */}
                     <motion.h2
-                        className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6"
+                        className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg"
+                        style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
                         variants={itemVariants}
                     >
                         Advanced Kidney Care & Nephrology Treatment
                     </motion.h2>
                     <motion.h1
-                        className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6"
+                        className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg"
+                        style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
                         variants={itemVariants}
                     >
-                        Dr. Rajdeb Saha
+                        Dr. Rajdeb Saha <span className="text-2xl md:text-3xl font-medium">MD, DM (Nephrology)</span>
                     </motion.h1>
 
-
                     <motion.p
-                        className="text-lg text-gray-100 mb-8 mx-auto max-w-2xl"
+                        className="text-lg text-gray-100 mb-8 mx-auto max-w-2xl drop-shadow-lg"
+                        style={{ textShadow: "0 2px 3px rgba(0,0,0,0.4)" }}
                         variants={itemVariants}
                     >
                         Board-certified nephrologist offering cutting-edge interventional procedures and evidence-based kidney treatments for patients of all ages.
