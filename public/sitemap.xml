@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://drrajdebsaha.com/</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/about</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/media</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/aki</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/ckd</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/glomerulonephritis</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/electrolyte-imbalance</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/diabetic-kidney-disease</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/hypertension</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/kidney-transplant</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/services/interventional-procedures</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/blog/diabetic-kidney-disease-prevention-signs-treatment</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/blog/understanding-kidney-transplants-patients-guide</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/blog/chronic-kidney-disease-understanding-silent-epidemic</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/blog/dialysis-demystified-understanding-treatment-options</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/blogs</loc>
+    </url>
+    <url>
+        <loc>https://drrajdebsaha.com/contact</loc>
+    </url>
+    <url>
+         
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/bg.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>bg.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/checkup.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>checkup.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/ckd.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>ckd.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/diabetic-kidney-disease.jpeg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>diabetic-kidney-disease.jpeg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/dialysis-treatment.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>dialysis-treatment.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/doc.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>doc.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/doctor-hand.avif</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>doctor-hand.avif</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/dr.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>dr.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/earth-globe.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>earth-globe.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/home.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>home.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/inoffice.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>inoffice.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/kidney-transplant.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>kidney-transplant.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/medical-chart.avif</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>medical-chart.avif</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/medical-symbol.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>medical-symbol.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/microscope.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>microscope.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/ontour.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>ontour.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/services</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>services</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/staff.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>staff.JPG</image:title>
+        </image:image>
+    </url>
+    <url>
+ 
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/bg.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/checkup.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/ckd.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/diabetic-kidney-disease.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/dialysis-treatment.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/doc.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/doctor-hand.avif</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/dr.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/earth-globe.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/home.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/inoffice.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/kidney-transplant.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/medical-chart.avif</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/medical-symbol.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/microscope.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/ontour.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/services</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drrajdebsaha.com//images/staff.JPG</image:loc>
+        </image:image>
+    </url>
+</urlset>
