@@ -9,6 +9,11 @@ import Blogs from './pages/Blogs';
 import BlogTemplate from './pages/BlogTemplate';
 import Services from './pages/Services';
 import Media from './pages/Media';
+import DelhiPage from './pages/DelhiPage';
+import SiliguriPage from './pages/SiliguriPage';
+import KolkataPage from './pages/kolkataPage';
+import GangaRamPage from './pages/GangaRamPage';
+import KidneyDoctorNearMe from './pages/KidneyDoctorNearMe';
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -25,6 +30,11 @@ const App: React.FC = () => {
     <Layout>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/kidney-doctor-delhi' element={<DelhiPage />}  />
+        <Route path='/kidney-doctor-in-sir-ganga-ram-hospital' element={<GangaRamPage />} />
+        <Route path='/kidney-doctor-near-me' element={<KidneyDoctorNearMe />} />
+        <Route  path='/kidney-doctor-in-siliguri' element={<SiliguriPage />} />
+        <Route path='/kidney-doctor-in-kolkata'  element={<KolkataPage />} />
         <Route path='/blog/:slug' element={<BlogTemplate />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/about' element={<About />} />
