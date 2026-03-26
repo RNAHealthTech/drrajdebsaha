@@ -13,21 +13,21 @@ const SiliguriPage: React.FC = () => {
         delayChildren: 0.1
       }
     }
-  };
+  } as any;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }
     }
-  };
+  } as any;
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
-  };
+  } as any;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
@@ -175,67 +175,67 @@ const SiliguriPage: React.FC = () => {
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">•</span>
                   <div>
-                    <strong>প্রস্রাবে রক্ত (Blood in urine)</strong> - গোলাপি, লাল বা বাদামী রঙের প্রস্রাব
+                    <strong>Blood in Urine (Hematuria)</strong> - Pink, red, or cola-colored urine
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">•</span>
                   <div>
-                    <strong>হঠাৎ কিডনি বন্ধ (Sudden kidney failure)</strong> - কিডনি দ্রুত কাজ বন্ধ করে দেওয়া
+                    <strong>Acute Kidney Failure</strong> - Sudden loss of kidney function
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">•</span>
                   <div>
-                    <strong>শরীর ফুলে যাওয়া (Severe swelling)</strong> - মুখ, পা বা সারা শরীর ফুলে যাওয়া
+                    <strong>Severe Body Swelling</strong> - Face, legs, or whole body swelling
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">•</span>
                   <div>
-                    <strong>কিডনিতে পাথর (Kidney stones)</strong> - পিঠে বা পাশে তীব্র ব্যথা
+                    <strong>Kidney Stones</strong> - Severe pain in the back or side
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">•</span>
                   <div>
-                    <strong>অতিরিক্ত উচ্চ রক্তচাপ</strong> - ওষুধে নিয়ন্ত্রণ করা কঠিন
+                    <strong>Severe Hypertension</strong> - High blood pressure difficult to control
                   </div>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">⚕️ দীর্ঘমেয়াদী কিডনি সমস্যা</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">⚕️ Chronic Kidney Problems</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
                   <div>
-                    <strong>ডায়াবেটিসের কারণে কিডনি ক্ষতি</strong> - চিনির রোগ কিডনিকে প্রভাবিত করা
+                    <strong>Diabetic Kidney Disease</strong> - Diabetes impacting kidney function
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
                   <div>
-                    <strong>ক্রনিক কিডনি ডিজিজ</strong> - ধীরে ধীরে কিডনির কার্যক্ষমতা কমে যাওয়া
+                    <strong>Chronic Kidney Disease</strong> - Gradual loss of kidney function over time
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
                   <div>
-                    <strong>প্রস্রাবে প্রোটিন</strong> - ফেনাযুক্ত বা বুদবুদ প্রস্রাব
+                    <strong>Protein in Urine</strong> - Foamy or bubbly appearance in urine
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
                   <div>
-                    <strong>প্রস্রাবের সমস্যা</strong> - খুব বেশি বা খুব কম প্রস্রাব হওয়া
+                    <strong>Urinary Issues</strong> - Passing too much or too little urine
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
                   <div>
-                    <strong>কিডনি ইনফেকশন</strong> - ব্যথা, জ্বর, জ্বালাপোড়া
+                    <strong>Kidney Infections</strong> - Pain, fever, and burning sensation
                   </div>
                 </li>
               </ul>
@@ -243,24 +243,24 @@ const SiliguriPage: React.FC = () => {
           </div>
 
           <div className="mt-8 p-6 bg-green-50 rounded-xl">
-            <h4 className="text-xl font-bold text-green-800 mb-3">🩺 কখন কিডনি বিশেষজ্ঞের কাছে যাবেন?</h4>
+            <h4 className="text-xl font-bold text-green-800 mb-3">🩺 When to See a Kidney Specialist?</h4>
             <p className="text-gray-700 mb-3">
-              এই লক্ষণগুলো দেখা দিলে দেরি না করে ডাক্তার দেখান:
+              Consult a doctor immediately if you notice these symptoms:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700 mb-4">
-              <div>• ক্রমাগত দুর্বলতা ও ক্লান্তি</div>
-              <div>• ক্ষুধা কমে যাওয়া বা বমি বমি ভাব</div>
-              <div>• ঘুমের সমস্যা</div>
-              <div>• ক্রমাগত চুলকানি</div>
-              <div>• মুখে ধাতব স্বাদ</div>
-              <div>• মাংসপেশীতে খিঁচুনি</div>
+              <div>• Persistent weakness and fatigue</div>
+              <div>• Loss of appetite or nausea</div>
+              <div>• Difficulty sleeping</div>
+              <div>• Persistent skin itching</div>
+              <div>• Metallic taste in mouth</div>
+              <div>• Muscle cramps</div>
             </div>
             <div className="text-center">
               <a
                 href="mailto:rajdeb@live.com"
                 className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors font-medium inline-block"
               >
-                এখনই বিশেষজ্ঞের পরামর্শ নিন
+                Consult Specialist Now
               </a>
             </div>
           </div>
@@ -309,31 +309,31 @@ const SiliguriPage: React.FC = () => {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">🏥 Advanced Procedures We Offer</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• কিডনি বায়োপসি (Kidney biopsy for tissue diagnosis)</li>
-                <li>• ডায়ালাইসিস এক্সেস তৈরি (Dialysis access creation)</li>
-                <li>• পেরিটোনিয়াল ডায়ালাইসিস ক্যাথেটার (PD catheter placement)</li>
-                <li>• কিডনি পাথরের চিকিৎসা পরামর্শ</li>
-                <li>• ট্রান্সপ্ল্যান্ট পূর্ব মূল্যায়ন</li>
-                <li>• ট্রান্সপ্ল্যান্ট পরবর্তী পরিচর্যা</li>
+                <li>• Kidney Biopsy - Precision tissue diagnosis</li>
+                <li>• Dialysis Access Creation - AV fistula and graft</li>
+                <li>• Peritoneal Dialysis (PD) Catheter Placement</li>
+                <li>• Kidney Stone Management & Counseling</li>
+                <li>• Pre-transplant Recipient Evaluation</li>
+                <li>• Post-transplant Monitoring & Care</li>
               </ul>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">💡 আমাদের বিশেষত্ব</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">💡 Our Specializations</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• আজই পরামর্শের সুবিধা</li>
-                <li>• বাংলা ও স্থানীয় ভাষায় বিস্তারিত ব্যাখ্যা</li>
-                <li>• অন্যান্য বিশেষজ্ঞদের সাথে সমন্বয়</li>
-                <li>• খাদ্য ও জীবনযাত্রার পরামর্শ</li>
-                <li>• জরুরি অবস্থায় ২৪/৭ গাইডেন্স</li>
-                <li>• বীমা ও ক্যাশলেস চিকিৎসার সহায়তা</li>
+                <li>• Prompt Consultation Availability</li>
+                <li>• Explanation in Local & Regional Languages</li>
+                <li>• Multi-disciplinary Care Coordination</li>
+                <li>• Dietary & Lifestyle Guidance</li>
+                <li>• 24/7 Emergency Support Guidance</li>
+                <li>• Insurance & Cashless Treatment Assistance</li>
               </ul>
               <div className="mt-4">
                 <a
                   href="mailto:rajdeb@live.com"
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors block text-center"
                 >
-                  পরামর্শের জন্য যোগাযোগ করুন
+                  Contact for Consultation
                 </a>
               </div>
             </div>
@@ -409,24 +409,24 @@ const SiliguriPage: React.FC = () => {
             <div className="space-y-6">
               {[
                 {
-                  question: "সিলিগুড়িতে কিডনি বিশেষজ্ঞের কাছে কখন যাব? (When should I see a kidney specialist in Siliguri?)",
-                  answer: "যদি আপনার প্রস্রাবে রক্ত থাকে, শরীর ফুলে যায়, উচ্চ রক্তচাপ নিয়ন্ত্রণে না থাকে, ডায়াবেটিসের জটিলতা হয়, অথবা আপনার পারিবারিক ডাক্তার কিডনি টেস্টে অস্বাভাবিকতা দেখে পরামর্শ দেন।"
+                  question: "When should I see a kidney specialist in Siliguri?",
+                  answer: "You should consult a nephrologist if you notice blood in urine, persistent body swelling, uncontrolled high blood pressure, diabetic complications, or if your primary doctor finds abnormalities in kidney tests."
                 },
                 {
-                  question: "প্রথম অ্যাপয়েন্টমেন্টে কী কী নিয়ে আসব?",
-                  answer: "সর্বশেষ রক্ত ও প্রস্রাবের রিপোর্ট, বর্তমান ওষুধের তালিকা, চিকিৎসার ইতিহাস, এবং কিডনি সংক্রান্ত আগের যেকোনো পরীক্ষা নিয়ে আসুন। ডায়াবেটিস বা উচ্চ রক্তচাপ থাকলে সেগুলোর রিপোর্টও আনুন।"
+                  question: "What should I bring for my first appointment?",
+                  answer: "Bring your latest blood and urine reports, list of current medications, medical history, and any previous kidney-related scan results. Reports for diabetes or hypertension are also essential."
                 },
                 {
-                  question: "কিডনি পাথরের চিকিৎসা পাওয়া যায়?",
-                  answer: "হ্যাঁ, ডা. রাজদেব সাহা কিডনি পাথরের সম্পূর্ণ মূল্যায়ন এবং চিকিৎসা প্রদান করেন। প্রয়োজনে অস্ত্রোপচারের জন্য ইউরোলজিস্টদের সাথে সমন্বয় করে সম্পূর্ণ চিকিৎসা নিশ্চিত করেন।"
+                  question: "Is treatment for kidney stones available?",
+                  answer: "Yes, Dr. Rajdeb Saha provides comprehensive evaluation and management for kidney stones, often using medications and coordination with urologists if surgical intervention is needed."
                 },
                 {
-                  question: "কিডনি ট্রান্সপ্ল্যান্টের পরামর্শ পাওয়া যায়?",
-                  answer: "অবশ্যই। ডা. রাজদেব সাহা সম্পূর্ণ ট্রান্সপ্ল্যান্ট পূর্ব মূল্যায়ন, দাতার সঙ্গতি পরীক্ষা, এবং দীর্ঘমেয়াদী ট্রান্সপ্ল্যান্ট পরবর্তী পরিচর্যা প্রদান করেন।"
+                  question: "Do you offer guidance for kidney transplantation?",
+                  answer: "Absolutely. Dr. Rajdeb Saha provides complete pre-transplant assessment, donor matching guidance, and specialized long-term post-transplant follow-up care."
                 },
                 {
-                  question: "উত্তরবঙ্গের রোগীদের জন্য বিশেষ সুবিধা আছে?",
-                  answer: "হ্যাঁ, আমরা স্থানীয় ভাষায় পরামর্শ, আঞ্চলিক স্বাস্থ্য সমস্যার বিশেষ বিবেচনা, এবং স্থানীয় হাসপাতালগুলোর সাথে সমন্বয়ের মাধ্যমে উত্তরবঙ্গের রোগীদের বিশেষ সেবা প্রদান করি।"
+                  question: "Are there special facilities for North Bengal patients?",
+                  answer: "Yes, we provide consultations in regional languages, specific consideration for health challenges in North Bengal, and direct coordination with local hospitals in the region."
                 }
               ].map((faq, index) => (
                 <div key={index} className="border-b border-gray-200 pb-4">
@@ -447,20 +447,20 @@ const SiliguriPage: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            আপনার কিডনির স্বাস্থ্য আমাদের অগ্রাধিকার
+            Your Kidney Health is Our Priority
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-            কিডনির সমস্যা আপনার জীবনকে নিয়ন্ত্রণ করতে দেবেন না। আজই ডা. রাজদেব সাহার সাথে পরামর্শ নিন এবং সুস্থ কিডনির দিকে প্রথম পদক্ষেপ নিন।
+            Don't let kidney issues control your life. Consult with Dr. Rajdeb Saha today and take the first step towards better kidney health.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-2">📧 যোগাযোগ</h3>
-              <p className="text-green-100">Email: rajdeb@live.com<br/>সিলিগুড়ি ও উত্তরবঙ্গের জন্য<br/>বিশেষজ্ঞ কিডনি চিকিৎসা</p>
+              <h3 className="text-xl font-bold mb-2">📧 Contact</h3>
+              <p className="text-green-100">Email: rajdeb@live.com<br/>Specialized Kidney Care for<br/>Siliguri & North Bengal</p>
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-2">🏥 সেবা এলাকা</h3>
-              <p className="text-green-100">সিলিগুড়ি, জলপাইগুড়ি, কুচবিহার<br/>দার্জিলিং, কালিম্পং, মালদা<br/>এবং সমগ্র উত্তরবঙ্গ</p>
+              <h3 className="text-xl font-bold mb-2">🏥 Service Areas</h3>
+              <p className="text-green-100">Siliguri, Jalpaiguri, Cooch Behar<br/>Darjeeling, Kalimpong, Malda<br/>& All North Bengal Districts</p>
             </div>
           </div>
 
@@ -472,20 +472,20 @@ const SiliguriPage: React.FC = () => {
               href="mailto:rajdeb@live.com"
               className="px-8 py-4 bg-white text-green-700 rounded-lg font-bold hover:bg-green-50 transition-all duration-300 shadow-lg"
             >
-              এখনই পরামর্শ নিন
+              Consult Now
             </a>
             <button
               onClick={() => window.location.href = '/services'}
               className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-green-700 transition-all duration-300 cursor-pointer"
             >
-              সব সেবা দেখুন
+              View All Services
             </button>
           </motion.div>
 
          
           <div className="mt-8 p-4 bg-white bg-opacity-10 rounded-lg">
             <p className="text-sm text-green-100">
-              <strong>বিশেষ সুবিধা:</strong> জরুরি পরামর্শ ২৪/৭ • বাংলা ভাষায় সম্পূর্ণ পরামর্শ • বীমা গ্রহণযোগ্য • ক্যাশলেস সুবিধা
+              <strong>Special Benefits:</strong> 24/7 Emergency Guidance • Full Consultation in English & Regional Languages • Insurance Accepted • Cashless Facilities
             </p>
           </div>
         </motion.section>
@@ -505,14 +505,14 @@ const SiliguriPage: React.FC = () => {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-bold text-red-800 mb-2">🚨 জরুরি কিডনি সমস্যায়</h3>
+              <h3 className="text-xl font-bold text-red-800 mb-2">🚨 Emergency Kidney Issues</h3>
               <p className="text-red-700 mb-3">
-                যদি আপনার হঠাৎ প্রস্রাব বন্ধ হয়ে যায়, প্রচণ্ড ব্যথা হয়, অতিরিক্ত ফুলে যান, বা শ্বাসকষ্ট হয় - তাহলে দেরি না করে নিকটতম হাসপাতালে যান।
+                If you experience sudden stoppage of urine, severe pain, extreme swelling, or short of breath - visit the nearest hospital without delay.
               </p>
               <div className="bg-white p-4 rounded-lg">
-                <p className="text-gray-800 font-semibold">জরুরি পরামর্শের জন্য:</p>
-                <p className="text-gray-700">📧 rajdeb@live.com তে তাৎক্ষণিক ইমেইল করুন</p>
-                <p className="text-gray-700">🏥 সিলিগুড়ির প্রধান হাসপাতালগুলোতে আমাদের সরাসরি কোঅর্ডিনেশন আছে</p>
+                <p className="text-gray-800 font-semibold">For Emergency Guidance:</p>
+                <p className="text-gray-700">📧 Email rajdeb@live.com immediately</p>
+                <p className="text-gray-700">🏥 We have direct coordination with major hospitals in Siliguri</p>
               </div>
             </div>
           </div>
@@ -528,38 +528,38 @@ const SiliguriPage: React.FC = () => {
         >
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-              <span className="text-green-600">পৌঁছানোর সুবিধা</span> ও অবস্থান
+              <span className="text-green-600">Accessibility</span> & Location
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">🚗 কীভাবে আসবেন</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">🚗 How to Reach</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>সিলিগুড়ি স্টেশন থেকে:</strong> অটো/ট্যাক্সিতে ১৫-২০ মিনিট</li>
-                  <li>• <strong>বাগডোগরা বিমানবন্দর থেকে:</strong> ৪৫ মিনিট ড্রাইভ</li>
-                  <li>• <strong>পার্কিং:</strong> হাসপাতাল কমপ্লেক্সে পর্যাপ্ত পার্কিং স্থান</li>
-                  <li>• <strong>পাবলিক ট্রান্সপোর্ট:</strong> প্রধান বাস রুটের কাছেই</li>
+                  <li>• <strong>From Siliguri Station:</strong> 15-20 mins by Auto/Taxi</li>
+                  <li>• <strong>From Bagdogra Airport:</strong> 45 mins drive</li>
+                  <li>• <strong>Parking:</strong> Ample parking space in hospital complex</li>
+                  <li>• <strong>Public Transport:</strong> Easily accessible via major bus routes</li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">♿ রোগীদের সুবিধা</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">♿ Patient Facilities</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• হুইলচেয়ার বন্ধুত্বপূর্ণ পরিবেশ</li>
-                  <li>• রোগী ও আত্মীয়দের জন্য বসার ব্যবস্থা</li>
-                  <li>• পরিষ্কার ওয়াশরুম সুবিধা</li>
-                  <li>• ক্যান্টিন ও ফার্মেসি একই কমপ্লেক্সে</li>
+                  <li>• Wheelchair accessible environment</li>
+                  <li>• Comfortable waiting area for patients and relatives</li>
+                  <li>• Clean washroom facilities</li>
+                  <li>• Canteen & Pharmacy within the same complex</li>
                 </ul>
               </div>
             </div>
 
             <div className="mt-8 bg-green-50 rounded-xl p-6">
-              <h4 className="text-lg font-bold text-green-800 mb-3">📅 অ্যাপয়েন্টমেন্ট বুকিং টিপস</h4>
+              <h4 className="text-lg font-bold text-green-800 mb-3">📅 Appointment Booking Tips</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
-                <div>• সকাল ১০টার মধ্যে ইমেইল করলে দ্রুত উত্তর পাবেন</div>
-                <div>• জরুরি ক্ষেত্রে ইমেইলে "URGENT" লিখুন</div>
-                <div>• পুরনো রিপোর্ট থাকলে PDF করে পাঠান</div>
-                <div>• রোগীর বয়স ও প্রধান সমস্যা উল্লেখ করুন</div>
+                <div>• Email before 10 AM for faster response</div>
+                <div>• Mention "URGENT" for emergency cases</div>
+                <div>• Send previous reports as PDF attachments</div>
+                <div>• Mention patient age and primary concern</div>
               </div>
             </div>
           </div>
@@ -574,27 +574,27 @@ const SiliguriPage: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-            রোগীদের <span className="text-green-600">মতামত</span>
+            Patient <span className="text-green-600">Testimonials</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "শ্রী রাম প্রসাদ শর্মা",
-                location: "জলপাইগুড়ি",
-                text: "ডায়াবেটিসের কারণে কিডনির সমস্যা হয়েছিল। ডা. রাজদেব সাহার চিকিৎসায় এখন অনেক ভালো আছি। উনার ব্যাখ্যা খুবই সহজ ও বোধগম্য।",
+                name: "Mr. Ram Prasad Sharma",
+                location: "Jalpaiguri",
+                text: "Was suffering from kidney complications due to diabetes. I am much better now under Dr. Rajdeb Saha's treatment. His explanations are very easy to understand.",
                 rating: 5
               },
               {
-                name: "সুশীলা দেবী",
-                location: "সিলিগুড়ি",
-                text: "কিডনি পাথরের জন্য দেখিয়েছিলাম। অপারেশন ছাড়াই ওষুধে ভালো হয়ে গেছে। ডাক্তার বাবু খুব ধৈর্য ধরে বোঝান।",
+                name: "Sushila Devi",
+                location: "Siliguri",
+                text: "Consulted for kidney stones. Recovered with medication alone, without surgery. The doctor explains everything with a lot of patience.",
                 rating: 5
               },
               {
-                name: "মিঃ তেনজিং শেরপা",
-                location: "দার্জিলিং",
-                text: "High blood pressure এর কারণে kidney affected হয়েছিল। Dr. Saha'র treatment অনেক effective. Follow-up ও regular করেন।",
+                name: "Mr. Tenzing Sherpa",
+                location: "Darjeeling",
+                text: "Kidneys were affected due to high blood pressure. Dr. Saha's treatment is very effective. He also provides regular follow-ups.",
                 rating: 5
               }
             ].map((testimonial, index) => (

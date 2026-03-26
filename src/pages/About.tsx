@@ -11,7 +11,7 @@ const About: React.FC = () => {
       y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  } as any;
   
   const staggerContainer = {
     hidden: { opacity: 0 },
@@ -21,7 +21,7 @@ const About: React.FC = () => {
         staggerChildren: 0.2
       }
     }
-  };
+  } as any;
 
   const letterAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -29,12 +29,12 @@ const About: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: { 
-        type: "spring",
+        type: "spring" as any,
         damping: 12,
         stiffness: 100
       }
     }
-  };
+  } as any;
 
   return (
     <div className="min-h-screen bg-white">

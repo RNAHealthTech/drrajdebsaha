@@ -49,10 +49,10 @@ const DoctorIntroduction: React.FC = () => {
             transition: {
                 delay: i * 0.3,
                 duration: 0.8,
-                ease: "easeOut"
+                ease: [0.25, 0.1, 0.25, 1] as any
             }
         })
-    };
+    } as any;
 
     const floatingBarVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -64,7 +64,7 @@ const DoctorIntroduction: React.FC = () => {
                 duration: 0.6
             }
         }
-    };
+    } as any;
 
     const cardVariants = {
         hidden: { opacity: 0, scale: 0.9 },
@@ -74,10 +74,10 @@ const DoctorIntroduction: React.FC = () => {
             transition: {
                 delay: 0.6,
                 duration: 0.8,
-                ease: "easeOut"
+                ease: [0.25, 0.1, 0.25, 1] as any
             }
         }
-    };
+    } as any;
 
     return (
         <div className="relative bg-gradient-to-r from-blue-50 to-blue-100 py-20 overflow-hidden" ref={scrollRef}>

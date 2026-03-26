@@ -22,16 +22,16 @@ const HeroSection: React.FC = () => {
                 delayChildren: 0.2
             }
         }
-    };
+    } as any;
 
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: "easeOut" }
+            transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as any }
         }
-    };
+    } as any;
 
     return (
         <div className="relative min-h-screen overflow-hidden bg-cover bg-center bg-no-repeat"

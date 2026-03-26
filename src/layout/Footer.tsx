@@ -13,27 +13,16 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
             {/* Main Footer */}
-            <div className="max-w-6xl mx-auto px-5 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="max-w-7xl mx-auto px-5 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                     {/* About Column */}
                     <div>
                         <h3 className="text-2xl font-bold mb-6">Dr. Rajdeb Saha</h3>
                         <p className="mb-2">Consultant</p>
                         <p className="mb-4">Nephrologist and Kidney Transplantation</p>
-                        {/* <div className="flex space-x-4 mt-4">
-                            <a href="#" className="hover:text-blue-300 transition-colors">
-                                <Instagram className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="hover:text-blue-300 transition-colors">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="hover:text-blue-300 transition-colors">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                        </div> */}
                     </div>
 
-                    {/* Services Column */}
+                    {/* Conditions Treated Column */}
                     <div>
                         <h3 className="text-xl font-semibold mb-6">Conditions Treated</h3>
                         <ul className="space-y-3">
@@ -102,6 +91,34 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
+                    {/* Key Services Column */}
+                    <div>
+                        <h3 className="text-xl font-semibold mb-6">Key Services</h3>
+                        <div className="space-y-4">
+                            <div>
+                                <h4 className="font-medium mb-2">Kidney Transplant</h4>
+                                <ul className="ml-4 space-y-1">
+                                    <li>
+                                        <Link to="/kidney-doctor-in-siliguri" className="text-white hover:text-blue-300 transition-colors duration-200">
+                                            Siliguri
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="font-medium mb-2">Kidney Care</h4>
+                                <ul className="ml-4 space-y-1">
+                                    <li>
+                                        <Link to="/kidney-doctor-in-siliguri" className="text-white hover:text-blue-300 transition-colors duration-200">
+                                            Siliguri
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Contact Column */}
                     <div>
                         <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
@@ -109,34 +126,33 @@ const Footer: React.FC = () => {
                             <li className="flex items-start">
                                 <Clock className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-medium">Private OPD Hours</p>
-                                    <p>Mon - Sat: 6 pm - 8 pm</p>
+                                    <p className="font-medium text-sm">Private OPD Hours</p>
+                                    <p className="text-sm">Mon - Sat: 6 pm - 8 pm</p>
                                 </div>
                             </li>
                             <li className="flex items-start">
                                 <MapPin className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-medium">Location</p>
-                                    <p>Room No: 1236</p>
+                                    <p className="font-medium text-sm">Location</p>
+                                    <p className="text-sm">Room No: 1236</p>
                                 </div>
                             </li>
                             <li className="flex items-start">
                                 <Mail className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-medium">Email</p>
-                                    <a href="mailto:rajdeb@live.com" className="hover:text-blue-300 transition-colors">
+                                    <p className="font-medium text-sm">Email</p>
+                                    <a href="mailto:rajdeb@live.com" className="hover:text-blue-300 transition-colors text-sm">
                                         rajdeb@live.com
                                     </a>
                                 </div>
                             </li>
                             <li className="flex items-start">
                                 <div>
-                                    <Link
+                                    <button
                                         onClick={openModal}
-                                        to="#"
-                                        className="px-4 py-2 bg-white text-blue-800 rounded-md hover:bg-blue-100 transition-colors inline-block mt-2">
+                                        className="px-4 py-2 bg-white text-blue-800 rounded-md hover:bg-blue-100 transition-colors inline-block mt-2 text-sm">
                                         Book Appointment
-                                    </Link>
+                                    </button>
                                 </div>
                             </li>
                         </ul>
