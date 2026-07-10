@@ -42,6 +42,7 @@ const App: React.FC = () => {
         <Route path='/services/:slug' element={<ServiceTemplate />} />
         <Route path='/media' element={<Media />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/appointment' element={<Contact />} />
       </Routes>
     </Layout>
   )

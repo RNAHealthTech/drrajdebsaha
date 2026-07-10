@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useForm, ValidationError } from "@formspree/react"
 
+import QRCode from 'react-qr-code';
+
 const CTASection: React.FC = () => {
   const [state, handleSubmit] = useForm('xqapkolz');
   const [formData, setFormData] = useState({
@@ -86,12 +88,12 @@ const CTASection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden h-full">
+            <div className="bg-white rounded-xl shadow-xl overflow-hidden h-full flex flex-col">
               <div className="bg-gradient-to-r from-blue-700 to-blue-800 p-5 text-white">
                 <h3 className="text-xl font-bold">Appointment Information</h3>
               </div>
 
-              <div className="p-6 space-y-6">
+              <div className="p-6 space-y-6 flex-grow">
                 {/* Appointment Times */}
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
@@ -101,9 +103,8 @@ const CTASection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-800">Consultation Hours</h4>
-                    <p className="text-gray-700">Mon - Fri: 9:00 AM - 5:00 PM</p>
-                    <p className="text-gray-700">Sat: 9:00 AM - 1:00 PM</p>
-                    <p className="text-gray-700 font-medium text-blue-700 mt-1">Private OPD: Mon - Sat, 6:00 PM - 8:00 PM</p>
+                    <p className="text-gray-700">Mon - Sat: 10:00 AM - 8:00 PM</p>
+                    <p className="text-gray-700 font-medium text-blue-700 mt-1">By Appointment</p>
                   </div>
                 </div>
 
@@ -132,6 +133,25 @@ const CTASection: React.FC = () => {
                     <h4 className="text-lg font-semibold text-gray-800">Urgent Care Available</h4>
                     <p className="text-gray-700">Same-day appointments for kidney emergencies</p>
                     <p className="text-gray-700 text-sm mt-1">Direct hospital admission facilitation when necessary</p>
+                  </div>
+                </div>
+                
+                {/* Social & QR Code */}
+                <div className="flex items-start space-x-4 mt-6 pt-6 border-t border-gray-200">
+                  <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-3 rounded-full flex-shrink-0">
+                    <svg className="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                  </div>
+                  <div className="flex flex-col xl:flex-row gap-4 items-start xl:items-center w-full justify-between">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-800">Follow on Instagram</h4>
+                      <a href="https://www.instagram.com/your_go_to_kidney_specialist" target="_blank" rel="noreferrer" className="text-blue-600 hover:text-blue-800 break-all text-sm font-medium">@your_go_to_kidney_specialist</a>
+                    </div>
+                    <div className="bg-white p-2 border border-gray-200 rounded-lg shadow-sm text-center">
+                      <QRCode value="https://drrajdebsaha.com/appointment" size={70} />
+                      <p className="text-xs text-blue-800 font-bold mt-1">Scan to Book</p>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -124,8 +124,8 @@ const Contact: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-800">Private OPD Hours</h3>
-                        <p className="text-gray-700">Mon - Sat: 6:00 PM - 8:00 PM</p>
+                        <h3 className="text-lg font-semibold text-gray-800">OPD Hours</h3>
+                        <p className="text-gray-700">Mon - Sat: 10:00 AM - 8:00 PM</p>
                         <p className="text-gray-700">Room No.: 1236</p>
                       </div>
                     </div>

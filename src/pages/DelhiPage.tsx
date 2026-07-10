@@ -216,7 +216,7 @@ const DelhiPage: React.FC = () => {
             variants={itemVariants}
           >
             <p className="text-lg font-medium">🏥 Sir Ganga Ram Hospital | 📍 Rajinder Nagar, New Delhi</p>
-            <p className="text-base mt-2">⏰ Mon-Sat: 6:00 PM - 8:00 PM | 📞 Expert Kidney Care Since 2010</p>
+            <p className="text-base mt-2">⏰ Mon-Sat: 10:00 AM - 8:00 PM | 📞 Expert Kidney Care Since 2010</p>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -592,7 +592,7 @@ const DelhiPage: React.FC = () => {
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">⏰ OPD Hours</h3>
-              <p className="text-blue-100">Monday to Saturday<br/>6:00 PM - 8:00 PM<br/>By Appointment</p>
+              <p className="text-blue-100">Monday to Saturday<br/>10:00 AM - 8:00 PM<br/>By Appointment</p>
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">📞 Contact</h3>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Clock, MapPin, Phone, Mail, Calendar, Instagram, Linkedin, Twitter } from "lucide-react";
 import AppointmentModal from "./AppointmentModal";
+import QRCode from "react-qr-code";
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
@@ -20,6 +21,20 @@ const Footer: React.FC = () => {
                         <h3 className="text-2xl font-bold mb-6">Dr. Rajdeb Saha</h3>
                         <p className="mb-2">Consultant</p>
                         <p className="mb-4">Nephrologist and Kidney Transplantation</p>
+                        
+                        {/* Social & QR */}
+                        <div className="mt-6">
+                            <h4 className="font-semibold mb-3">Connect With Us</h4>
+                            <div className="flex items-center space-x-4">
+                                <a href="https://www.instagram.com/your_go_to_kidney_specialist" target="_blank" rel="noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors flex items-center group">
+                                    <Instagram className="w-5 h-5 group-hover:text-pink-400 transition-colors" />
+                                </a>
+                                <div className="bg-white p-1 rounded shadow-sm text-center">
+                                    <QRCode value="https://drrajdebsaha.com/appointment" size={50} />
+                                    <p className="text-[10px] text-blue-800 mt-1 font-bold leading-tight">Scan to<br/>Book</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Conditions Treated Column */}
@@ -126,8 +141,8 @@ const Footer: React.FC = () => {
                             <li className="flex items-start">
                                 <Clock className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
                                 <div>
-                                    <p className="font-medium text-sm">Private OPD Hours</p>
-                                    <p className="text-sm">Mon - Sat: 6 pm - 8 pm</p>
+                                    <p className="font-medium text-sm">OPD Hours</p>
+                                    <p className="text-sm">Mon - Sat: 10:00 AM - 8:00 PM</p>
                                 </div>
                             </li>
                             <li className="flex items-start">
