@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useForm, ValidationError } from "@formspree/react"
-
+import { useForm } from "@formspree/react";
+import { Calendar, Clock, User, Phone, MessageSquare, CheckCircle } from 'lucide-react';
 import QRCode from 'react-qr-code';
+
+const TIME_SLOTS = [
+  '10:00 AM - 12:00 PM (Morning)',
+  '12:00 PM - 02:00 PM (Afternoon)',
+  '04:00 PM - 06:00 PM (Evening)',
+  '06:00 PM - 08:00 PM (Night)',
+];
 
 const CTASection: React.FC = () => {
   const [state, handleSubmit] = useForm('xqapkolz');
+  const todayStr = new Date().toISOString().split('T')[0];
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    //email: '',
-    // date: '',
+    date: todayStr,
+    timeSlot: TIME_SLOTS[0],
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
       ...prevData,
@@ -23,29 +32,26 @@ const CTASection: React.FC = () => {
     }));
   };
 
+  const handleSlotSelect = (slot: string) => {
+    setFormData(prevData => ({
+      ...prevData,
+      timeSlot: slot
+    }));
+  };
+
   const handleFinalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    //console.log('Form submitted:', formData);
-    // Reset form after submission
     handleSubmit(formData);
     handleWhatsAppSubmit();
-
   };
 
   const handleWhatsAppSubmit = () => {
-    const phoneNumber = '919561409398'; //  number without spaces or special characters
+    const phoneNumber = '919561409398';
 
-    // Format the message for WhatsApp
-    const message = `Hello Dr. Rajdeb,\n\nNew appointment request:\nName: ${formData.name}\nPhone: ${formData.phone}\nQuery: ${formData.message}`;
+    const message = `Hello Dr. Rajdeb,\n\nNew Appointment Request:\n• Name: ${formData.name}\n• Phone: ${formData.phone}\n• Preferred Date: ${formData.date}\n• Preferred Time: ${formData.timeSlot}\n• Query: ${formData.message || 'N/A'}`;
 
-    // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
-
-    // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, '_blank');
   };
 
@@ -170,96 +176,116 @@ const CTASection: React.FC = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Request Appointment</h3>
                 {state.succeeded ? (
-                  <p>
-                    Thank You for Submitting! We will contact your shortly
-                  </p>
+                  <div className="text-center py-6">
+                    <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto mb-2 animate-bounce" />
+                    <h4 className="text-lg font-bold text-gray-800">Booking Submitted!</h4>
+                    <p className="text-gray-600 text-xs mt-1">Opening WhatsApp to confirm your appointment details...</p>
+                  </div>
                 ) : (
-                  <form onSubmit={handleFinalSubmit} className="space-y-4">
+                  <form onSubmit={handleFinalSubmit} className="space-y-4 font-work-sans">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                      <label htmlFor="cta-name" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                        <User className="w-4 h-4 text-blue-600" /> Full Name <span className="text-red-500">*</span>
+                      </label>
                       <input
                         type="text"
-                        id="name"
+                        id="cta-name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-                        placeholder="Your name"
+                        className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                        placeholder="Your full name"
                         required
                       />
                     </div>
 
-                    {/* <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-                        placeholder="your.email@example.com"
-                        required
-                      />
-                      <ValidationError prefix="Email" field="email" errors={state.errors} />
-
-                    </div> */}
-
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                      <label htmlFor="cta-phone" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                        <Phone className="w-4 h-4 text-blue-600" /> Phone Number <span className="text-red-500">*</span>
+                      </label>
                       <input
                         type="tel"
-                        id="phone"
+                        id="cta-phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-                        placeholder="Your contact number"
+                        className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                        placeholder="Your 10-digit mobile number"
                         required
                       />
                     </div>
-                    {/* <div>
-                      <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Appointment Date</label>
+
+                    {/* Date Picker */}
+                    <div>
+                      <label htmlFor="cta-date" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                        <Calendar className="w-4 h-4 text-blue-600" /> Select Appointment Date <span className="text-red-500">*</span>
+                      </label>
                       <input
                         type="date"
-                        id="date"
+                        id="cta-date"
                         name="date"
+                        min={todayStr}
                         value={formData.date}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300`}
-
+                        className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                         required
                       />
+                    </div>
 
-                      <ValidationError prefix="Date" field="date" errors={state.errors} />
-
-                    </div> */}
+                    {/* Time Slot Picker */}
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                        <Clock className="w-4 h-4 text-blue-600" /> Select Time Slot <span className="text-red-500">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
+                        {TIME_SLOTS.map((slot) => {
+                          const isSelected = formData.timeSlot === slot;
+                          return (
+                            <button
+                              key={slot}
+                              type="button"
+                              onClick={() => handleSlotSelect(slot)}
+                              className={`px-2.5 py-1.5 text-xs font-medium rounded-lg border transition-all text-left flex items-center justify-between ${
+                                isSelected
+                                  ? 'bg-blue-50 border-blue-600 text-blue-800 shadow-sm font-semibold ring-1 ring-blue-600'
+                                  : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100 hover:border-gray-300'
+                              }`}
+                            >
+                              <span>{slot}</span>
+                              {isSelected && <CheckCircle className="w-3 h-3 text-blue-600 flex-shrink-0" />}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Concerns (Optional)</label>
+                      <label htmlFor="cta-message" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                        <MessageSquare className="w-4 h-4 text-blue-600" /> Message / Symptoms (Optional)
+                      </label>
                       <textarea
-                        id="message"
+                        id="cta-message"
                         name="message"
-                        rows={3}
+                        rows={2}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-                        placeholder="Briefly describe your symptoms or concerns"
-                        required
+                        className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                        placeholder="Briefly describe your health queries..."
                       ></textarea>
                     </div>
 
                     <motion.button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center gap-2 text-sm"
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
                     >
-                      Request Appointment
+                      <Calendar className="w-4 h-4" />
+                      Request Appointment Now
                     </motion.button>
 
-                    <p className="text-center text-xs text-gray-500 mt-2">
-                      Your information is secure and will only be used to contact you regarding your appointment
+                    <p className="text-center text-xs text-gray-500 mt-1">
+                      Direct WhatsApp booking confirmation
                     </p>
                   </form>
                 )}

@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Calendar, Clock, User, Phone, MessageSquare, CheckCircle } from 'lucide-react';
 
-
+const TIME_SLOTS = [
+  '10:00 AM - 12:00 PM (Morning)',
+  '12:00 PM - 02:00 PM (Afternoon)',
+  '04:00 PM - 06:00 PM (Evening)',
+  '06:00 PM - 08:00 PM (Night)',
+];
 
 const Contact: React.FC = () => {
   const [state, handleSubmit] = useForm('xqapkolz');
+  const todayStr = new Date().toISOString().split('T')[0];
+
   const [formData, setFormData] = useState({
     name: '',
-    // email: '',
     phone: '',
-    // date: '',
+    date: todayStr,
+    timeSlot: TIME_SLOTS[0],
     message: ''
   });
 
@@ -22,25 +30,26 @@ const Contact: React.FC = () => {
     }));
   };
 
+  const handleSlotSelect = (slot: string) => {
+    setFormData(prevData => ({
+      ...prevData,
+      timeSlot: slot
+    }));
+  };
+
   const handleFinalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSubmit(formData);
     handleWhatsAppSubmit();
-  }
+  };
 
   const handleWhatsAppSubmit = () => {
-    const phoneNumber = '919561409398'; //  number without spaces or special characters
+    const phoneNumber = '919561409398';
 
-    // Format the message for WhatsApp
-    const message = `Hello Dr. Rajdeb,\n\nNew appointment request:\nName: ${formData.name}\nPhone: ${formData.phone}\nQuery: ${formData.message}`;
+    const message = `Hello Dr. Rajdeb,\n\nNew Appointment Request:\n• Name: ${formData.name}\n• Phone: ${formData.phone}\n• Preferred Date: ${formData.date}\n• Preferred Time: ${formData.timeSlot}\n• Query: ${formData.message || 'N/A'}`;
 
-    // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
-
-    // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, '_blank');
   };
 
@@ -178,114 +187,122 @@ const Contact: React.FC = () => {
                   <div className="p-8">
                     <h2 className="text-2xl font-bold text-gray-800 mb-6">Schedule a Consultation</h2>
                     {state.succeeded ? (
-                      <p>
-                        Thank You for Submitting! We will contact your shortly
-                      </p>
+                      <div className="text-center py-8">
+                        <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-3 animate-bounce" />
+                        <h3 className="text-xl font-bold text-gray-800">Booking Submitted Successfully!</h3>
+                        <p className="text-gray-600 text-sm mt-2">Opening WhatsApp to confirm your appointment details...</p>
+                      </div>
                     ) : (
                       <form onSubmit={handleFinalSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           {/* Name Field */}
                           <div>
-                            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                              <User className="w-4 h-4 text-blue-600" /> Full Name <span className="text-red-500">*</span>
+                            </label>
                             <input
                               type="text"
                               id="name"
                               name="name"
                               value={formData.name}
                               onChange={handleChange}
-                              className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300`}
+                              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                               placeholder="Your full name"
                               required
                             />
                           </div>
 
-                          {/* Email Field */}
-                          {/* <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input
-                              type="email"
-                              id="email"
-                              name="email"
-                              value={formData.email}
-                              onChange={handleChange}
-                              className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300`}
-                              placeholder="your.email@example.com"
-                              required
-                            />
-                            <ValidationError prefix="Email" field="email" errors={state.errors} />
-
-                          </div> */}
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           {/* Phone Field */}
                           <div>
-                            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                              <Phone className="w-4 h-4 text-blue-600" /> Phone Number <span className="text-red-500">*</span>
+                            </label>
                             <input
                               type="tel"
                               id="phone"
                               name="phone"
                               value={formData.phone}
                               onChange={handleChange}
-                              className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300`}
-                              placeholder="Your contact number"
+                              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                              placeholder="Your 10-digit contact number"
                               required
                             />
                           </div>
+                        </div>
 
-                          {/* Date Field */}
-                          {/* <div>
-                            <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Appointment Date</label>
-                            <input
-                              type="date"
-                              id="date"
-                              name="date"
-                              value={formData.date}
-                              onChange={handleChange}
-                              className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300`}
-                             
-                              required
-                            />
+                        {/* Date Field (Calendar) */}
+                        <div>
+                          <label htmlFor="date" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                            <Calendar className="w-4 h-4 text-blue-600" /> Select Preferred Appointment Date <span className="text-red-500">*</span>
+                          </label>
+                          <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            min={todayStr}
+                            value={formData.date}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                            required
+                          />
+                        </div>
 
-                          <ValidationError prefix="Date" field="date" errors={state.errors} />
-
-                          </div> */}
+                        {/* Time Slot Field */}
+                        <div>
+                          <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-1.5">
+                            <Clock className="w-4 h-4 text-blue-600" /> Select Preferred Time Slot <span className="text-red-500">*</span>
+                          </label>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {TIME_SLOTS.map((slot) => {
+                              const isSelected = formData.timeSlot === slot;
+                              return (
+                                <button
+                                  key={slot}
+                                  type="button"
+                                  onClick={() => handleSlotSelect(slot)}
+                                  className={`px-4 py-3 text-xs sm:text-sm font-medium rounded-lg border transition-all text-left flex items-center justify-between ${
+                                    isSelected
+                                      ? 'bg-blue-50 border-blue-600 text-blue-800 shadow-sm font-semibold ring-2 ring-blue-600'
+                                      : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100 hover:border-gray-300'
+                                  }`}
+                                >
+                                  <span>{slot}</span>
+                                  {isSelected && <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />}
+                                </button>
+                              );
+                            })}
+                          </div>
                         </div>
 
                         {/* Message Field */}
                         <div>
-                          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Additional Information (Optional)</label>
+                          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-1.5">
+                            <MessageSquare className="w-4 h-4 text-blue-600" /> Additional Information / Symptoms (Optional)
+                          </label>
                           <textarea
                             id="message"
-                            rows={4}
+                            rows={3}
                             name="message"
                             value={formData.message}
-
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
-                            placeholder="Please describe your symptoms or any specific questions you have for Dr. Saha"
-                            required
+                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                            placeholder="Please describe your symptoms or any specific questions for Dr. Saha..."
                           ></textarea>
                         </div>
 
                         {/* Submit Button */}
                         <motion.button
                           type="submit"
-
-                          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed transition duration-300"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
+                          className="w-full bg-gradient-to-r from-blue-700 to-blue-800 text-white font-semibold py-3.5 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center gap-2 text-base"
+                          whileHover={{ scale: 1.01 }}
+                          whileTap={{ scale: 0.99 }}
                         >
-
-                          <span className="flex items-center justify-center">
-                            
-                            Submit
-                          </span>
-
+                          <Calendar className="w-5 h-5" />
+                          Book Appointment Now
                         </motion.button>
 
-                        <p className="text-center text-sm text-gray-500 mt-4">
-                          You'll receive confirmation via email shortly after booking
+                        <p className="text-center text-xs text-gray-500 mt-3">
+                          Instant WhatsApp confirmation will be sent upon submission
                         </p>
                       </form>
                     )}

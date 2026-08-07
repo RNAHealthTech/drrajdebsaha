@@ -2,19 +2,29 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useForm } from '@formspree/react';
+import { Calendar, Clock, User, Phone, MessageSquare, X, CheckCircle } from 'lucide-react';
 
 interface AppointmentModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const TIME_SLOTS = [
+  '10:00 AM - 12:00 PM (Morning)',
+  '12:00 PM - 02:00 PM (Afternoon)',
+  '04:00 PM - 06:00 PM (Evening)',
+  '06:00 PM - 08:00 PM (Night)',
+];
+
 const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) => {
   const [state, handleSubmit] = useForm('xqapkolz');
+  const todayStr = new Date().toISOString().split('T')[0];
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    // email: '',
-    // date: '',
+    date: todayStr,
+    timeSlot: TIME_SLOTS[0],
     text: '',
   });
 
@@ -25,15 +35,15 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
         setFormData({
           name: '',
           phone: '',
-          // email: '',
-          // date: '',
+          date: todayStr,
+          timeSlot: TIME_SLOTS[0],
           text: '',
         });
       }, 3000);
 
       return () => clearTimeout(timer);
     }
-  }, [state.succeeded, onClose]);
+  }, [state.succeeded, onClose, todayStr]);
 
   if (!isOpen) return null;
 
@@ -45,6 +55,13 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     }));
   };
 
+  const handleSlotSelect = (slot: string) => {
+    setFormData(prevData => ({
+      ...prevData,
+      timeSlot: slot
+    }));
+  };
+
   const handleFinalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSubmit(formData);
@@ -52,17 +69,13 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
   };
 
   const sendWhatsAppMessage = () => {
-    const message = `New Appointment Request:
-    
-    Name: ${formData.name}
-    Phone: ${formData.phone}
-    Message: ${formData.text}`;
+    const message = `Hello Dr. Rajdeb,\n\nNew Appointment Request:\n• Name: ${formData.name}\n• Phone: ${formData.phone}\n• Preferred Date: ${formData.date}\n• Preferred Time: ${formData.timeSlot}\n• Message: ${formData.text || 'N/A'}`;
 
     const whatsappNumber = '919561409398';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
-  }
+  };
 
   return ReactDOM.createPortal(
     <AnimatePresence>
@@ -71,47 +84,145 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-orange-200 bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4 z-[1000]"
+          className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-[1000]"
+          onClick={onClose}
         >
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            className="bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto shadow-lg"
+            initial={{ scale: 0.95, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl border border-blue-100 relative"
           >
-            <h2 className="text-2xl font-bold mb-4 text-center font-fraunces-slab text-blue-800">Book Appointment</h2>
-            {state.succeeded ? (
-              <p className="text-blue-700 text-center font-work-sans">Your appointment has been booked successfully!</p>
-            ) : (
-              <form onSubmit={handleFinalSubmit} className="space-y-4 font-work-sans">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-blue-700">Name</label>
-                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
-                </div>
-                {/* <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-blue-700">Email</label>
-                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
-                  <ValidationError prefix="Email" field="email" errors={state.errors} />
-                </div> */}
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-blue-700">Phone</label>
-                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="mt-1 block w-full border border-blue-400 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
-                </div>
-                {/* <div>
-                  <label htmlFor="date" className="block text-sm font-medium text-blue-700">Preferred Date</label>
-                  <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
-                </div> */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              aria-label="Close modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-blue-900 font-fraunces-slab">Book Appointment</h2>
+              <p className="text-sm text-gray-600 mt-1">Select your preferred date & time for consultation</p>
+            </div>
+
+            {state.succeeded ? (
+              <div className="text-center py-8">
+                <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-3 animate-bounce" />
+                <h3 className="text-xl font-bold text-gray-800">Booking Submitted!</h3>
+                <p className="text-gray-600 text-sm mt-2">Opening WhatsApp to confirm your appointment details...</p>
+              </div>
+            ) : (
+              <form onSubmit={handleFinalSubmit} className="space-y-5 font-work-sans">
+                {/* Full Name */}
                 <div>
-                  <label htmlFor="text" className="block text-sm font-medium text-blue-700">Message</label>
-                  <textarea id="text" name="text" rows={4} value={formData.text} onChange={handleChange} className="mt-1 block w-full border border-blue-500 rounded-md shadow-sm p-2 bg-white text-zinc-900 focus:ring-2 focus:ring-blue-400 focus:border-transparent"></textarea>
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <User className="w-4 h-4 text-blue-600" /> Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your full name"
+                    className="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm"
+                  />
                 </div>
-                <div className="flex justify-end space-x-2">
-                  <button type="button" onClick={onClose} className="px-4 py-2 border border-blue-300 rounded-md text-sm font-medium text-blue-700 hover:bg-blue-100 transition-colors duration-300">
+
+                {/* Phone Number */}
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <Phone className="w-4 h-4 text-blue-600" /> Phone Number <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter 10-digit mobile number"
+                    className="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm"
+                  />
+                </div>
+
+                {/* Preferred Date (Calendar) */}
+                <div>
+                  <label htmlFor="date" className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <Calendar className="w-4 h-4 text-blue-600" /> Select Appointment Date <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    min={todayStr}
+                    value={formData.date}
+                    onChange={handleChange}
+                    required
+                    className="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm"
+                  />
+                </div>
+
+                {/* Preferred Time Slot */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <Clock className="w-4 h-4 text-blue-600" /> Select Time Slot <span className="text-red-500">*</span>
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                    {TIME_SLOTS.map((slot) => {
+                      const isSelected = formData.timeSlot === slot;
+                      return (
+                        <button
+                          key={slot}
+                          type="button"
+                          onClick={() => handleSlotSelect(slot)}
+                          className={`px-3 py-2 text-xs font-medium rounded-lg border transition-all text-left flex items-center justify-between ${
+                            isSelected
+                              ? 'bg-blue-50 border-blue-600 text-blue-800 shadow-sm font-semibold ring-1 ring-blue-600'
+                              : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100 hover:border-gray-300'
+                          }`}
+                        >
+                          <span>{slot}</span>
+                          {isSelected && <CheckCircle className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Additional Message */}
+                <div>
+                  <label htmlFor="text" className="block text-sm font-semibold text-gray-700 mb-1.5 flex items-center gap-1.5">
+                    <MessageSquare className="w-4 h-4 text-blue-600" /> Message / Symptoms (Optional)
+                  </label>
+                  <textarea
+                    id="text"
+                    name="text"
+                    rows={3}
+                    value={formData.text}
+                    onChange={handleChange}
+                    placeholder="Briefly describe your symptoms or health queries..."
+                    className="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm"
+                  ></textarea>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex items-center justify-end space-x-3 pt-2">
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="px-4 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
                     Cancel
                   </button>
-                  <button type="submit" className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-blue-900 bg-white  transition-colors duration-300">
-                    Book Appointment
+                  <button
+                    type="submit"
+                    className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+                  >
+                    <Calendar className="w-4 h-4" /> Book Appointment
                   </button>
                 </div>
               </form>
