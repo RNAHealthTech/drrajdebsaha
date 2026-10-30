@@ -116,14 +116,14 @@ const ServiceTemplate: React.FC = () => {
               <p className="text-gray-700 mb-6">
                 Dr. Rajdeb Saha takes a comprehensive approach to treating {service.title}, combining the latest
                 evidence-based medicine with personalized care plans tailored to each patient's unique needs. Treatment
-                may include medication management, lifestyle modifications, and regular monitoring to ensure optimal outcomes.
+                may include medication management, lifestyle modifications, and regular monitoring to support long-term kidney function.
               </p>
 
               <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-6 rounded-lg shadow-md mb-8">
                 <h3 className="text-xl font-semibold mb-4">Schedule a Consultation</h3>
                 <p className="mb-4">
                   If you're experiencing symptoms or have concerns about {service.title}, don't hesitate to schedule
-                  a consultation with Dr. Rajdeb Saha. Early intervention is key to achieving the best possible outcomes.
+                  a consultation with Dr. Rajdeb Saha. Early intervention is key to supporting optimal kidney health.
                 </p>
                 <Link
                   onClick={openModal}

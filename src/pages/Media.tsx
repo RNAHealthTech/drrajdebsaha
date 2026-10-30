@@ -34,14 +34,14 @@ const Media: React.FC = () => {
     { id: 4, title: "Kidney awareness camp", category: "Community" },
     { id: 5, title: "Medical team", category: "Professional" },
     { id: 6, title: "Advanced treatment equipment", category: "Facilities" },
-    { id: 7, title: "Patient success story", category: "Clinical" },
+    { id: 7, title: "Patient care discussion", category: "Clinical" },
     { id: 8, title: "International medical conference", category: "Professional" },
   ];
 
   // Sample video data (placeholders)
   const videos = [
     { id: 1, title: "Understanding Kidney Disease", duration: "5:32", category: "Educational" },
-    { id: 2, title: "Patient Testimonial - Rajesh Kumar", duration: "3:45", category: "Testimonial" },
+    { id: 2, title: "Patient Experience - Living with Kidney Disease", duration: "3:45", category: "Patient Education" },
     { id: 3, title: "Advancements in Nephrology", duration: "8:12", category: "Educational" },
     { id: 4, title: "Tour of Our Facilities", duration: "4:20", category: "Facilities" },
     { id: 5, title: "Interview with Dr. Saha", duration: "12:08", category: "Professional" },
@@ -185,7 +185,7 @@ const Media: React.FC = () => {
           Media Categories
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {['Clinical', 'Educational', 'Testimonials', 'Professional'].map((category) => (
+          {['Clinical', 'Educational', 'Patient Stories', 'Professional'].map((category) => (
             <div key={category} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300 border-t-4 border-blue-500">
               <h3 className="text-xl font-medium text-blue-700 mb-3">{category}</h3>
               <p className="text-blue-600">

@@ -74,20 +74,20 @@ const DelhiPage: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-tight mb-4"
             variants={itemVariants}
           >
-            Delhi's Leading <span className="text-blue-200">Kidney Specialist</span>
+            Consultant <span className="text-blue-200">Kidney Specialist</span> in Delhi
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-center max-w-4xl mb-6"
             variants={itemVariants}
           >
-            Dr. Rajdeb Saha - Your Trusted Nephrologist at Sir Ganga Ram Hospital
+            Dr. Rajdeb Saha - Nephrologist at Sir Ganga Ram Hospital
           </motion.p>
           <motion.div 
             className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 text-center"
             variants={itemVariants}
           >
             <p className="text-lg font-medium">🏥 Sir Ganga Ram Hospital | 📍 Rajinder Nagar, New Delhi</p>
-            <p className="text-base mt-2">⏰ Mon-Sat: 10:00 AM - 8:00 PM | 📞 Expert Kidney Care Since 2010</p>
+            <p className="text-base mt-2">⏰ Mon-Sat: 10:00 AM - 8:00 PM | 📞 Comprehensive Kidney Care</p>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -108,7 +108,7 @@ const DelhiPage: React.FC = () => {
               Why Choose Dr. Rajdeb Saha for Your <span className="text-blue-600">Kidney Problems?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              When you're dealing with kidney issues, you need a specialist who combines expertise, compassion, and cutting-edge treatment options. Here's why patients across Delhi trust Dr. Rajdeb Saha.
+              When managing kidney concerns, having a dedicated specialist who combines medical training, clear communication, and modern treatment options is essential. Learn more about Dr. Rajdeb Saha's practice in Delhi.
             </p>
           </div>
 
@@ -116,18 +116,18 @@ const DelhiPage: React.FC = () => {
             {[
               {
                 icon: "🎓",
-                title: "Top Medical Credentials",
+                title: "Advanced Medical Qualifications",
                 description: "MD, DM (Nephrology) with specialized training in kidney diseases and transplantation from premier medical institutions"
               },
               {
                 icon: "🏥",
                 title: "Sir Ganga Ram Hospital",
-                description: "Practicing at one of Delhi's most prestigious hospitals with state-of-the-art kidney care facilities and advanced dialysis units"
+                description: "Practicing at Sir Ganga Ram Hospital with advanced kidney care facilities and modern dialysis units"
               },
               {
                 icon: "💉",
                 title: "Advanced Procedures",
-                description: "Expert in interventional nephrology including kidney biopsies, dialysis access procedures, and minimally invasive treatments"
+                description: "Trained in interventional nephrology including kidney biopsies, dialysis access procedures, and minimally invasive treatments"
               },
               {
                 icon: "🫀",
@@ -136,7 +136,7 @@ const DelhiPage: React.FC = () => {
               },
               {
                 icon: "🌍",
-                title: "Multilingual Expert",
+                title: "Multilingual Consultations",
                 description: "Consultations available in English, Hindi, Bengali, Marathi, Nepali, and Kannada for better patient communication"
               },
               {
@@ -266,7 +266,7 @@ const DelhiPage: React.FC = () => {
                 onClick={openModal}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                Get Expert Opinion Now
+                Schedule a Consultation
               </button>
             </div>
           </div>
@@ -346,7 +346,7 @@ const DelhiPage: React.FC = () => {
           </div>
         </motion.section>
 
-        {/* Patient Success Stories */}
+        {/* Patient Perspectives */}
         <motion.section 
           className="mb-16 bg-gray-50 rounded-2xl p-8 md:p-12"
           initial="hidden"
@@ -355,13 +355,13 @@ const DelhiPage: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
-            Why Patients Choose Dr. Rajdeb Saha in Delhi
+            Patient Perspectives in Delhi
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Dr. Saha detected my kidney problem early when other doctors missed it. His timely treatment saved my kidneys from further damage.",
+                quote: "Dr. Saha took time to explain my kidney test results thoroughly and guided me on dietary and medical steps to manage my health effectively.",
                 patient: "Priya S., Gurgaon",
                 condition: "Early CKD Detection"
               },
@@ -371,7 +371,7 @@ const DelhiPage: React.FC = () => {
                 condition: "Dialysis Care"
               },
               {
-                quote: "My diabetes was affecting my kidneys. Dr. Saha's comprehensive approach helped control both conditions effectively.",
+                quote: "My diabetes was affecting my kidneys. Dr. Saha's comprehensive guidance helped me manage my kidney care alongside my diabetes treatment.",
                 patient: "Sunita M., Noida",
                 condition: "Diabetic Kidney Disease"
               }

@@ -31,14 +31,14 @@ const KidneyDoctorNearMe: React.FC = () => {
           variants={fadeInUp}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-tight mb-4">
-            Best <span className="text-blue-200">Kidney Doctor Near Me</span>
+            Consult a <span className="text-blue-200">Kidney Specialist Near You</span>
           </h1>
           <p className="text-xl md:text-2xl text-center max-w-4xl mb-6">
-            Dr. Rajdeb Saha - Top Nephrologist in Delhi NCR | Gurgaon | Noida
+            Dr. Rajdeb Saha - Consultant Nephrologist in Delhi NCR | Gurgaon | Noida
           </p>
           <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 text-center">
-            <p className="text-lg font-medium">🏥 Expert Kidney Specialist | Nephrology Consultant</p>
-            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 25+ Years Experience | 🌟 1000+ Happy Patients</p>
+            <p className="text-lg font-medium">🏥 Kidney Specialist | Nephrology Consultant</p>
+            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Dedicated Clinical Experience | 📍 Delhi NCR</p>
           </div>
         </motion.div>
       </motion.div>
@@ -57,14 +57,14 @@ const KidneyDoctorNearMe: React.FC = () => {
               Looking for <span className="text-blue-600">"Kidney Doctor Near Me"</span>?
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              You've found the right place! Dr. Rajdeb Saha is the leading kidney specialist serving Delhi, Gurgaon, Noida, Faridabad, and entire NCR region with world-class nephrology care.
+              Dr. Rajdeb Saha provides comprehensive nephrology consultations and kidney care for patients across Delhi, Gurgaon, Noida, Faridabad, and the wider NCR region.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
-              { icon: "🎯", title: "Best Nephrologist Near Me", desc: "Top-rated kidney doctor in Delhi NCR" },
-              { icon: "🏥", title: "Kidney Specialist Doctor", desc: "Expert in all kidney diseases & treatments" },
+              { icon: "🎯", title: "Nephrologist Near Me", desc: "Consultant kidney specialist in Delhi NCR" },
+              { icon: "🏥", title: "Kidney Specialist Doctor", desc: "Care for kidney conditions & treatments" },
               { icon: "💊", title: "Kidney Treatment Center", desc: "Advanced dialysis & transplant care" },
               { icon: "🔬", title: "Kidney Function Test", desc: "Complete diagnostic services available" }
             ].map((item, index) => (
@@ -126,7 +126,7 @@ const KidneyDoctorNearMe: React.FC = () => {
                 <li>• Kidney biopsy procedure</li>
                 <li>• Urine protein test</li>
                 <li>• Kidney health screening</li>
-                <li>• Best kidney doctor consultation</li>
+                <li>• Nephrology consultation</li>
               </ul>
             </div>
           </div>
@@ -145,7 +145,7 @@ const KidneyDoctorNearMe: React.FC = () => {
               href="mailto:rajdeb@live.com"
               className="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition-colors font-medium inline-block"
             >
-              Get Expert Opinion Now
+              Schedule a Consultation
             </a>
           </div>
         </motion.section>
@@ -201,7 +201,7 @@ const KidneyDoctorNearMe: React.FC = () => {
                   href="mailto:rajdeb@live.com"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors block text-center text-sm"
                 >
-                  Book Appointment - Best Kidney Doctor
+                  Book Appointment - Kidney Specialist
                 </a>
               </div>
             </div>
@@ -217,15 +217,15 @@ const KidneyDoctorNearMe: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
-            Why Dr. Rajdeb Saha is the <span className="text-blue-600">Best Choice</span>
+            Why Choose <span className="text-blue-600">Dr. Rajdeb Saha</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: "🏆",
-                title: "Top Kidney Specialist",
-                desc: "MD, DM Nephrology with 25+ years treating kidney diseases in Delhi NCR"
+                title: "Qualified Kidney Specialist",
+                desc: "MD, DM (Nephrology) with specialized training in kidney disease management"
               },
               {
                 icon: "🔬",
@@ -278,8 +278,8 @@ const KidneyDoctorNearMe: React.FC = () => {
             <div className="space-y-6">
               {[
                 {
-                  question: "How do I find the best kidney doctor near me in Delhi NCR?",
-                  answer: "Dr. Rajdeb Saha is rated as one of the top nephrologists in Delhi NCR with MD, DM qualifications and 25+ years experience treating all kidney conditions."
+                  question: "How do I choose a kidney doctor near me in Delhi NCR?",
+                  answer: "Look for qualified specialists with DM or DNB in Nephrology and institutional experience. Dr. Rajdeb Saha holds MD and DM (Nephrology) qualifications, providing comprehensive care for kidney conditions at Sir Ganga Ram Hospital."
                 },
                 {
                   question: "What kidney problems require immediate medical attention?",
@@ -316,16 +316,16 @@ const KidneyDoctorNearMe: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Get Expert Kidney Care Today
+            Consult for Kidney Care Today
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Don't search anymore for "kidney doctor near me" - you've found the best! Contact Dr. Rajdeb Saha for immediate kidney care consultation.
+            If you are looking for kidney care in Delhi NCR, contact Dr. Rajdeb Saha to schedule your nephrology consultation.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">📧 Direct Contact</h3>
-              <p className="text-blue-100">Email: rajdeb@live.com<br/>Best Kidney Doctor in Delhi NCR<br/>Expert Nephrology Care</p>
+              <p className="text-blue-100">Email: rajdeb@live.com<br/>Nephrologist in Delhi NCR<br/>Comprehensive Kidney Care</p>
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">🏥 Coverage Area</h3>
@@ -338,7 +338,7 @@ const KidneyDoctorNearMe: React.FC = () => {
               href="mailto:rajdeb@live.com"
               className="px-8 py-4 bg-white text-blue-700 rounded-lg font-bold hover:bg-blue-50 transition-all duration-300 shadow-lg"
             >
-              Contact Best Kidney Doctor Now
+              Schedule Your Consultation Now
             </a>
             <button
               onClick={() => window.location.href = '/services'}

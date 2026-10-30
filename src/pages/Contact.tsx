@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                 Connect with <span className="text-purple-200">Dr. Rajdeb Saha</span>
               </h1>
               <p className="text-xl md:text-2xl mt-4 text-center max-w-3xl">
-                Expert Nephrology Consultation & Care
+                Nephrology Consultation & Kidney Care
               </p>
             </motion.div>
           </motion.div>
@@ -302,7 +302,7 @@ const Contact: React.FC = () => {
                         </motion.button>
 
                         <p className="text-center text-xs text-gray-500 mt-3">
-                          Instant WhatsApp confirmation will be sent upon submission
+                          WhatsApp appointment details will open upon submission
                         </p>
                       </form>
                     )}

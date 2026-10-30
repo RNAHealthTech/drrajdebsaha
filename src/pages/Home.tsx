@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
                         style={{ textShadow: "0 2px 3px rgba(0,0,0,0.4)" }}
                         variants={itemVariants}
                     >
-                        Board-certified nephrologist offering cutting-edge interventional procedures and evidence-based kidney treatments for patients of all ages.
+                        Consultant nephrologist offering interventional nephrology procedures and evidence-based kidney treatments for adolescent and adult patients.
                     </motion.p>
 
                     {/* CTA Buttons */}

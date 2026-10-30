@@ -82,12 +82,12 @@ const About: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
               >
-                With exceptional expertise in interventional nephrology and kidney transplantation, 
-                Dr. Saha brings over a decade of specialized training and experience to his practice. 
-                Renowned for his personalized approach to kidney care, he combines advanced medical knowledge 
+                Specializing in interventional nephrology and kidney transplantation, 
+                Dr. Saha brings focused clinical training and experience to his practice. 
+                Dedicated to a personalized approach to kidney care, he combines medical knowledge 
                 with compassionate patient support to deliver comprehensive treatment for complex kidney conditions. 
                 His multilingual capabilities enable him to connect with patients from diverse backgrounds, 
-                ensuring clear communication and understanding throughout the treatment process.
+                ensuring clear communication and understanding throughout the evaluation and treatment process.
               </motion.p>
               
               <motion.div 
@@ -111,7 +111,7 @@ const About: React.FC = () => {
               {/* Placeholder for Doctor's Image */}
               <div className="w-full h-full md:h-96 rounded-lg flex items-center justify-center text-white">
                 <div className="text-center">
-                  <img src='/images/dr.JPG' alt='doctor' className='w-full h-full' />
+                  <img src='/images/dr.JPG' alt='Dr. Rajdeb Saha, Consultant Nephrologist' className='w-full h-full' />
                 </div>
               </div>
             </motion.div>
@@ -337,7 +337,7 @@ const About: React.FC = () => {
                 transition={{ delay: 0.1, duration: 0.6 }}
               >
                 <div className="absolute w-4 h-4 bg-sky-600 rounded-full -left-2 top-1"></div>
-                <div className="font-semibold text-lg">DM (Nephology)</div>
+                <div className="font-semibold text-lg">DM (Nephrology)</div>
                 <div className="text-gray-600">KMC, Manipal - 2024</div>
               </motion.div>
               
@@ -461,8 +461,8 @@ const About: React.FC = () => {
           >
             <h2 className="text-3xl font-bold mb-6">Schedule a Consultation</h2>
             <p className="text-lg max-w-2xl mx-auto mb-8 opacity-90">
-              Take the first step towards better kidney health. Dr. Raj Deb Saha provides personalized
-              care and advanced treatment options for all kidney-related conditions.
+              Take the first step towards better kidney health. Dr. Rajdeb Saha provides personalized
+              care and comprehensive treatment options for kidney-related conditions.
             </p>
             <button className="bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold transition hover:bg-sky-50">
               Book an Appointment

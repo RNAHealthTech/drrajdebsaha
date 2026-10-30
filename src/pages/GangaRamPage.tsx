@@ -60,20 +60,20 @@ const GangaRamPage: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-tight mb-4"
             variants={itemVariants}
           >
-            Best <span className="text-orange-200">Kidney Doctor</span> at Sir Ganga Ram Hospital
+            Kidney Care & <span className="text-orange-200">Nephrology</span> at Sir Ganga Ram Hospital
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-center max-w-4xl mb-6"
             variants={itemVariants}
           >
-            Dr. Rajdeb Saha - Premier Nephrology Care at Delhi's Leading Hospital
+            Dr. Rajdeb Saha - Nephrology Care at Sir Ganga Ram Hospital
           </motion.p>
           <motion.div 
             className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 text-center"
             variants={itemVariants}
           >
             <p className="text-lg font-medium">🏥 Sir Ganga Ram Hospital Nephrology Department</p>
-            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Expert Nephrologist | 🌟 Karol Bagh, New Delhi</p>
+            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Consultant Nephrologist | 📍 Karol Bagh, New Delhi</p>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -91,10 +91,10 @@ const GangaRamPage: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Top <span className="text-red-600">Nephrologist</span> at Sir Ganga Ram Hospital
+              Consultant <span className="text-red-600">Nephrologist</span> at Sir Ganga Ram Hospital
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Advanced kidney care at one of Delhi's most trusted hospitals with state-of-the-art facilities and personalized treatment approach.
+              Advanced kidney care at Sir Ganga Ram Hospital with modern facilities and an individualized treatment approach.
             </p>
           </div>
 
@@ -102,12 +102,12 @@ const GangaRamPage: React.FC = () => {
             {[
               {
                 icon: "🏥",
-                title: "Sir Ganga Ram Hospital Excellence",
-                description: "Practice at Delhi's premier multi-specialty hospital known for world-class medical care and advanced technology"
+                title: "Sir Ganga Ram Hospital Care",
+                description: "Clinical practice at Sir Ganga Ram Hospital, offering advanced multi-specialty care and modern technology"
               },
               {
                 icon: "🎓",
-                title: "MD, DM Nephrology Expert",
+                title: "MD, DM Nephrology Qualifications",
                 description: "Highly qualified nephrologist with specialized training in kidney diseases, dialysis, and transplant medicine"
               },
               {
@@ -118,7 +118,7 @@ const GangaRamPage: React.FC = () => {
               {
                 icon: "💉",
                 title: "Kidney Transplant Specialist",
-                description: "Expert in pre-transplant evaluation, post-transplant care, and immunosuppressive management at SGRH"
+                description: "Trained in pre-transplant evaluation, post-transplant care, and immunosuppressive management at SGRH"
               },
               {
                 icon: "⚡",
@@ -128,7 +128,7 @@ const GangaRamPage: React.FC = () => {
               {
                 icon: "🏆",
                 title: "SGRH Quality Standards",
-                description: "Adherence to international quality protocols and patient safety standards of Sir Ganga Ram Hospital"
+                description: "Adherence to established quality protocols and patient safety standards of Sir Ganga Ram Hospital"
               }
             ].map((item, index) => (
               <motion.div
@@ -236,7 +236,7 @@ const GangaRamPage: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-            <span className="text-red-600">World-Class</span> Kidney Care Facilities
+            <span className="text-red-600">Advanced</span> Kidney Care Facilities
           </h2>
 
           <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl text-white p-8 md:p-12 mb-8">
@@ -253,7 +253,7 @@ const GangaRamPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4">👨‍⚕️</div>
-                <h3 className="text-xl font-bold mb-3">Expert Team</h3>
+                <h3 className="text-xl font-bold mb-3">Multidisciplinary Team</h3>
                 <p className="text-red-100">Multidisciplinary approach with nephrologists, surgeons, and support staff</p>
               </div>
             </div>
@@ -309,7 +309,7 @@ const GangaRamPage: React.FC = () => {
           <div className="space-y-6">
             {[
               {
-                question: "How to book appointment with kidney doctor at Sir Ganga Ram Hospital?",
+                question: "How to book an appointment with Dr. Rajdeb Saha at Sir Ganga Ram Hospital?",
                 answer: "Contact Dr. Rajdeb Saha directly at rajdeb@live.com for prompt appointment scheduling. Emergency cases are seen immediately at SGRH nephrology department."
               },
               {
@@ -342,10 +342,10 @@ const GangaRamPage: React.FC = () => {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Expert Kidney Care at Sir Ganga Ram Hospital
+            Kidney Care at Sir Ganga Ram Hospital
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Trust Delhi's leading hospital for your kidney health. Dr. Rajdeb Saha provides comprehensive nephrology care with SGRH's world-class facilities.
+            Consult for kidney care at Sir Ganga Ram Hospital. Dr. Rajdeb Saha provides comprehensive nephrology evaluations and management.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

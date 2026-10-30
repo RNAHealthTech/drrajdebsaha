@@ -54,11 +54,10 @@ const ServicesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Expert Kidney Care Services
+            Kidney Care Services
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg">
-            Dr. Rajdeb Saha delivers specialized nephrology treatments using innovative, 
-            evidence-based approaches for optimal kidney health
+            Dr. Rajdeb Saha delivers specialized nephrology evaluations and evidence-based care plans for kidney health
           </p>
         </motion.div>
 

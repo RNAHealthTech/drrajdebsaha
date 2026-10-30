@@ -29,7 +29,7 @@ const Blogs: React.FC = () => {
             Nephrology Insights Blog
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert information and advice on kidney health, treatment options, and living well with kidney disease.
+            Educational information and clinical guidance on kidney health, treatment options, and living well with kidney disease.
           </p>
         </div>
 

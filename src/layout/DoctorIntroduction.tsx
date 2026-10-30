@@ -118,7 +118,7 @@ const DoctorIntroduction: React.FC = () => {
                                 <div>
                                     <h3 className="font-serif text-xl text-blue-900 mb-2">Greetings!</h3>
                                     <p className="font-serif text-blue-800">
-                                        I'm Dr. Rajdeb Saha, and I'm dedicated to providing exceptional kidney care with a personalized approach for each patient.
+                                        I'm Dr. Rajdeb Saha, and I'm dedicated to providing compassionate kidney care with a personalized approach for each patient.
                                     </p>
                                 </div>
                             </div>
@@ -157,7 +157,7 @@ const DoctorIntroduction: React.FC = () => {
                                 <div>
                                     {/* <h3 className="font-serif text-xl text-blue-900 mb-2">My Commitment</h3> */}
                                     <p className="font-serif text-blue-800">
-                                        I focus on interventional nephrology and kidney transplantation, ensuring you receive the most advanced care available for your kidney health needs.
+                                        I focus on interventional nephrology and kidney transplantation, providing thorough, patient-centered care for your kidney health needs.
                                     </p>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@ const DoctorIntroduction: React.FC = () => {
                                         className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden"
                                         style={{ transform: 'translateZ(40px)' }}
                                     >
-                                        <img src="/images/home.JPG" alt='doctor' className="w-full h-full object-cover" />
+                                        <img src="/images/home.JPG" alt='Dr. Rajdeb Saha, Consultant Nephrologist' className="w-full h-full object-cover" />
                                     </div>
                                     <h2
                                         className="text-2xl font-bold text-gray-900"
@@ -252,12 +252,12 @@ const DoctorIntroduction: React.FC = () => {
                     className="bg-white shadow-lg rounded-xl max-w-5xl mx-auto mt-16 z-20 overflow-hidden">
                     <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
                         <div className="p-6 text-center">
-                            <h3 className="font-bold text-xl text-gray-800 mb-2">Expert Care</h3>
-                            <p className="text-gray-600">Specialized treatment for all kidney-related conditions</p>
+                            <h3 className="font-bold text-xl text-gray-800 mb-2">Specialized Care</h3>
+                            <p className="text-gray-600">Dedicated evaluation and management for kidney-related conditions</p>
                         </div>
                         <div className="p-6 text-center">
-                            <h3 className="font-bold text-xl text-gray-800 mb-2">Advanced Procedures</h3>
-                            <p className="text-gray-600">Cutting-edge interventional nephrology techniques</p>
+                            <h3 className="font-bold text-xl text-gray-800 mb-2">Modern Procedures</h3>
+                            <p className="text-gray-600">Evidence-based interventional nephrology techniques</p>
                         </div>
                         <div className="p-6 text-center">
                             <h3 className="font-bold text-xl text-gray-800 mb-2">Personal Approach</h3>

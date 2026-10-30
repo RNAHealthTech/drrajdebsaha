@@ -15,15 +15,15 @@ const ImageCarousel: React.FC = () => {
         },
         {
             src: "/images/ontour.JPG",
-            alt: "routine",
+            alt: "Clinical rounds and medical consultation",
         },
         {
             src: "/images/checkup.JPG",
-            alt: "work",
+            alt: "Patient evaluation and nephrology consultation",
         },
         {
             src: "/images/staff.JPG",
-            alt: "with staff"
+            alt: "Dr. Rajdeb Saha with clinical and healthcare staff"
         }
     ],[]);
 

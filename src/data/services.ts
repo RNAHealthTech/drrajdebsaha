@@ -127,7 +127,7 @@ const services: Service[] = [
     shortTitle: "Electrolyte Disorders",
     slug: "electrolyte-imbalance",
     briefDescription: "Abnormal levels of essential minerals in the blood requiring specialized correction",
-    fullDescription: "Electrolyte imbalances occur when essential minerals in your blood are too high or too low. Dr. Rajdeb Saha provides expert diagnosis and treatment for disorders involving sodium, potassium, calcium, magnesium, and other critical electrolytes.",
+    fullDescription: "Electrolyte imbalances occur when essential minerals in your blood are too high or too low. Dr. Rajdeb Saha provides clinical evaluation and treatment for disorders involving sodium, potassium, calcium, magnesium, and other critical electrolytes.",
     imagePath: "/images/services/ele.webp",
     iconPath: "/icons/electrolyte-icon.svg",
     traits: [
@@ -231,7 +231,7 @@ const services: Service[] = [
     shortTitle: "Transplant",
     slug: "kidney-transplant",
     briefDescription: "Comprehensive pre and post-transplant care for kidney transplant patients",
-    fullDescription: "Dr. Rajdeb Saha provides expert care for patients before and after kidney transplantation. Services include transplant evaluation, waitlist management, immunosuppression monitoring, and long-term care to optimize transplant outcomes and quality of life.",
+    fullDescription: "Dr. Rajdeb Saha provides clinical care for patients before and after kidney transplantation. Services include pre-transplant evaluation, waitlist guidance, immunosuppression monitoring, and long-term follow-up to support kidney health and quality of life.",
     imagePath: "/images/services/kidney-transplant.jpg",
     iconPath: "/icons/transplant-icon.svg",
     traits: [
@@ -265,7 +265,7 @@ const services: Service[] = [
     shortTitle: "Procedures",
     slug: "interventional-procedures",
     briefDescription: "Specialized minimally invasive procedures for kidney disease diagnosis and treatment",
-    fullDescription: "Dr. Rajdeb Saha offers various interventional nephrology procedures including kidney biopsies, dialysis access management, and minimally invasive treatments. These procedures are performed with advanced techniques to ensure patient safety and optimal outcomes.",
+    fullDescription: "Dr. Rajdeb Saha offers various interventional nephrology procedures including kidney biopsies, dialysis access management, and minimally invasive treatments. These procedures are performed using standard clinical protocols with a focus on patient safety and precision.",
     imagePath: "/images/services/interventions.jpg",
     iconPath: "/icons/procedure-icon.svg",
     traits: [

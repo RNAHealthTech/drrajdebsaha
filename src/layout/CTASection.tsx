@@ -81,7 +81,7 @@ const CTASection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Take the first step towards better kidney health with Dr. Rajdeb Saha's expert consultation. Same-day appointments available for urgent cases.
+            Take the first step towards better kidney health with Dr. Rajdeb Saha's nephrology consultation. Same-day appointments available for urgent cases.
           </motion.p>
         </div>
 
@@ -356,8 +356,8 @@ const CTASection: React.FC = () => {
           </Link>
 
           <p className="mt-4 text-gray-600 text-sm max-w-2xl mx-auto">
-            Dr. Rajdeb Saha is a board-certified nephrologist specializing in kidney disease management,
-            dialysis care, and transplant medicine. Serving patients in Delhi NCR with over 15 years of experience.
+            Dr. Rajdeb Saha is a qualified nephrologist specializing in kidney disease management,
+            dialysis care, and transplant medicine, dedicated to compassionate, evidence-based patient care in Delhi NCR.
           </p>
         </motion.div>
       </div>

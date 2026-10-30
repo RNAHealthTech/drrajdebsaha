@@ -68,20 +68,20 @@ const SiliguriPage: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-tight mb-4"
             variants={itemVariants}
           >
-            Best <span className="text-green-200">Kidney Doctor</span> in Siliguri
+            Kidney Care & <span className="text-green-200">Nephrology Consultation</span> in Siliguri
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-center max-w-4xl mb-6"
             variants={itemVariants}
           >
-            Dr. Rajdeb Saha - Serving North Bengal with Expert Nephrology Care
+            Dr. Rajdeb Saha - Serving North Bengal with Dedicated Nephrology Care
           </motion.p>
           <motion.div 
             className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 text-center"
             variants={itemVariants}
           >
             <p className="text-lg font-medium">🏥 Advanced Kidney Care for Siliguri & North Bengal Region</p>
-            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Expert Nephrologist | 🌟 Trusted by Thousands</p>
+            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Consultant Nephrologist | 📍 Siliguri & North Bengal</p>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -99,10 +99,10 @@ const SiliguriPage: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Why Dr. Rajdeb Saha is <span className="text-green-600">Siliguri's Preferred</span> Kidney Specialist
+              Consultation with <span className="text-green-600">Dr. Rajdeb Saha</span> in Siliguri
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              When kidney problems affect your life, you need North Bengal's most trusted nephrologist. Dr. Rajdeb Saha brings world-class kidney care to Siliguri and surrounding areas.
+              When dealing with kidney health concerns, consult Dr. Rajdeb Saha for comprehensive nephrology evaluation and personalized care in Siliguri and surrounding North Bengal areas.
             </p>
           </div>
 
@@ -110,8 +110,8 @@ const SiliguriPage: React.FC = () => {
             {[
               {
                 icon: "🎓",
-                title: "Premier Medical Education",
-                description: "MD, DM (Nephrology) with specialized training from top medical institutions. Bringing international standards to Siliguri"
+                title: "Advanced Medical Qualifications",
+                description: "MD, DM (Nephrology) with specialized training in kidney disease management and interventional procedures."
               },
               {
                 icon: "🏥",
@@ -121,11 +121,11 @@ const SiliguriPage: React.FC = () => {
               {
                 icon: "💉",
                 title: "Interventional Nephrology",
-                description: "Expert in advanced procedures like dialysis access creation, kidney biopsies, and minimally invasive treatments"
+                description: "Trained in procedures like dialysis access creation, kidney biopsies, and interventional nephrology"
               },
               {
                 icon: "🫀",
-                title: "Complete Kidney Solutions",
+                title: "Comprehensive Kidney Care",
                 description: "From early detection to transplant guidance - comprehensive care for all kidney-related conditions"
               },
               {
@@ -588,7 +588,7 @@ const SiliguriPage: React.FC = () => {
               {
                 name: "Sushila Devi",
                 location: "Siliguri",
-                text: "Consulted for kidney stones. Recovered with medication alone, without surgery. The doctor explains everything with a lot of patience.",
+                text: "Consulted for kidney stones. Guided through medication and lifestyle adjustments with thorough, patient explanations.",
                 rating: 5
               },
               {

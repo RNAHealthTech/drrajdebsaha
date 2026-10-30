@@ -66,20 +66,20 @@ const KolkataPage: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-tight mb-4"
             variants={itemVariants}
           >
-            Best <span className="text-blue-200">Kidney Doctor</span> in Kolkata
+            Kidney Care & <span className="text-blue-200">Nephrology Consultation</span> in Kolkata
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-center max-w-4xl mb-6"
             variants={itemVariants}
           >
-            Dr. Rajdeb Saha - Premier Nephrology Care in the City of Joy
+            Dr. Rajdeb Saha - Nephrology Care in the City of Joy
           </motion.p>
           <motion.div 
             className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 text-center"
             variants={itemVariants}
           >
             <p className="text-lg font-medium">🏥 Advanced Kidney Care for Kolkata & West Bengal</p>
-            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Expert Nephrologist | 🌟 Trusted by Thousands</p>
+            <p className="text-base mt-2">📧 rajdeb@live.com | 🩺 Consultant Nephrologist | 📍 Kolkata & West Bengal</p>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -100,7 +100,7 @@ const KolkataPage: React.FC = () => {
               Why Choose Dr. Rajdeb Saha in <span className="text-blue-600">Kolkata</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bringing world-class nephrology expertise to Kolkata with personalized care and advanced treatment options for all kidney-related conditions.
+              Providing specialized nephrology care in Kolkata with personalized evaluations and evidence-based treatment plans for kidney conditions.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ const KolkataPage: React.FC = () => {
               {
                 icon: "💉",
                 title: "Advanced Procedures",
-                description: "Expert in kidney biopsies, dialysis access procedures, and minimally invasive interventional nephrology"
+                description: "Trained in kidney biopsies, dialysis access procedures, and interventional nephrology"
               },
               {
                 icon: "🔬",
@@ -243,7 +243,7 @@ const KolkataPage: React.FC = () => {
                 href="mailto:rajdeb@live.com"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium inline-block"
               >
-                Schedule Expert Consultation
+                Schedule Consultation
               </a>
             </div>
           </div>
@@ -348,7 +348,7 @@ const KolkataPage: React.FC = () => {
               <div className="text-3xl mb-4">🏥</div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">Hospital Network</h3>
               <p className="text-gray-600">
-                Direct coordination with leading hospitals in Kolkata for seamless care delivery and emergency interventions when required.
+                Direct coordination with major hospitals in Kolkata for seamless care delivery and emergency interventions when required.
               </p>
             </div>
             
@@ -439,7 +439,7 @@ const KolkataPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">📧 Contact Information</h3>
-              <p className="text-blue-100">Email: rajdeb@live.com<br/>Expert Kidney Care for Kolkata<br/>& Greater West Bengal Region</p>
+              <p className="text-blue-100">Email: rajdeb@live.com<br/>Kidney Care for Kolkata<br/>& Greater West Bengal Region</p>
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">🏥 Service Areas</h3>
